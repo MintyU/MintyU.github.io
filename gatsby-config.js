@@ -99,7 +99,7 @@ const gatsbyConfig = {
         display: `standalone`,
         icon: 'src/images/icon.png',
         legacy: false,
-        include_favicon: false,
+        include_favicon: true,
       },
     },
 
