@@ -1,8 +1,8 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: '16px',
-  baseLineHeight: 1.666,
+  baseFontSize: '17px',
+  baseLineHeight: 1.777,
   headerFontFamily: ['Nanum Gothic'],
   bodyFontFamily: ['Nanum Gothic'],
 });
@@ -13,11 +13,11 @@ const googleFont = [
     bold: [400, 700],
   },
   {
-    name: 'Nanum Gothic Coding',
+    name: 'Source Code Pro',
     bold: [400, 700],
   },
   {
-    name: 'Noto Serif KR',
+    name: 'Noto Sans KR',
     bold: [300, 400, 700],
   },
   { name: 'Raleway' },
