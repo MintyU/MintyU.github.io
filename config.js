@@ -1,28 +1,28 @@
 module.exports = {
   /** Site MetaData (Required all)*/
-  title: `Title`,                           // (* Required)
-  description: `Blog Description`,          // (* Required)
-  author: `Author`,                         // (* Required)
+  title: `MintyU`,                           // (* Required)
+  description: `KHU Software Convergence`,          // (* Required)
+  author: `MintyU`,                         // (* Required)
   siteUrl: 'https://',                      // (* Required)
     // ex.'https://junhobaik.github.io'
     // ex.'https://junhobaik.github.io/' << X, Do not enter "/" at the end.
 
   /** Header */
-  profileImageFileName: '', // include filename extension ex.'profile.jpg'
+  profileImageFileName: 'profile.png', // include filename extension ex.'profile.jpg'
     // The Profile image file is located at path "./images/"
     // If the file does not exist, it is replaced by a random image.
 
   /** Home > Bio information*/
-  comment: 'Enter your information in the "./config.js" file. ',
-  name: 'User Name',
+  comment: 'KHU Software Convergence 19',
+  name: 'Yeonsu Kim',
   company: '',
   location: 'Korea',
-  email: '',
-  website: 'https://github.com/junhobaik/junhobaik.github.io',           // ex.'https://junhobaik.github.io'
+  email: 'deathcat@khu.ac.kr',
+  website: 'https://MintyU.github.io',           // ex.'https://junhobaik.github.io'
   linkedin: '',                                                          // ex.'https://www.linkedin.com/in/junho-baik-16073a19ab'
   facebook: '',                                                          // ex.'https://www.facebook.com/zuck' or 'https://www.facebook.com/profile.php?id=000000000000000'
   instagram: '',                                                         // ex.'https://www.instagram.com/junhobaik'
-  github: '',                                                            // ex.'https://github.com/junhobaik'
+  github: 'https://github.com/MintyU',                                                            // ex.'https://github.com/junhobaik'
 
   /** Post */
   enablePostOfContents: true,     // TableOfContents activation (Type of Value: Boolean. Not String)
