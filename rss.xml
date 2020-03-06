@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[KHU Software Convergence]]></description><link>https://MintyU.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 06 Mar 2020 13:58:00 GMT</lastBuildDate><item><title><![CDATA[바닥부터 시작하는 C++ (1) - 기본 특징]]></title><description><![CDATA[123]]></description><link>https://MintyU.github.io/cpp02.md/</link><guid isPermaLink="false">https://MintyU.github.io/cpp02.md/</guid><pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;123&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#123&quot; aria-label=&quot;123 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;123&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[바닥부터 시작하는 C++ (1) - 기본 특징]]></title><description><![CDATA[C++의 특징 C++이 프로그래밍 언어로써 가지는 특징은 다음과 같습니다. C++은 절차 지향적이며 구조적 프로그래밍 언어입니다. C++은 객체 지향 프로그래밍 언어입니다. C++은 일반화 프로그래밍 언어입니다. 이처럼 C…]]></description><link>https://MintyU.github.io/cpp01.md/</link><guid isPermaLink="false">https://MintyU.github.io/cpp01.md/</guid><pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;c의-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#c%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;c의 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;C++의 특징&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[KHU Software Convergence]]></description><link>https://MintyU.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 06 Mar 2020 14:32:11 GMT</lastBuildDate><item><title><![CDATA[바닥부터 시작하는 C++ (2) - 네임스페이스, 주석]]></title><description><![CDATA[네임스페이스(Namespace) 네임스페이스란 이름이 기억되는 영역을 뜻하며, 이름이 소속된 공간을 의미합니다. 네임스페이스는 C++ 프로그램을 작성할 때 발생하는 이름에 대한 충돌을 방지해 주는 방법을 제공합니다. 이러한 네임스페이스는 C…]]></description><link>https://MintyU.github.io/cpp02.md/</link><guid isPermaLink="false">https://MintyU.github.io/cpp02.md/</guid><pubDate>Sun, 16 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;네임스페이스namespace&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%84%A4%EC%9E%84%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4namespace&quot; aria-label=&quot;네임스페이스namespace permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;네임스페이스(Namespace)&lt;/h2&gt;
+&lt;p&gt;네임스페이스란 이름이 기억되는 영역을 뜻하며, 이름이 소속된 공간을 의미합니다.&lt;/p&gt;
+&lt;p&gt;네임스페이스는 C++ 프로그램을 작성할 때 발생하는 이름에 대한 충돌을 방지해 주는 방법을 제공합니다.&lt;/p&gt;
+&lt;p&gt;이러한 네임스페이스는 C언어에는 없는 C++ 만의 새로운 기능입니다.&lt;/p&gt;
+&lt;p&gt;C++ 프로그램의 표준 구성 요소인 클래스, 함수, 변수 등은 std라는 이름 공간에 저장되어 있습니다.&lt;/p&gt;
+&lt;p&gt;따라서 C++ 프로그램에서 표준 헤더 파일인 iostream 내의 정의를 사용하려면 다음과 같이 사용해야 합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예제&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;define&lt;/span&gt; TEXT &quot;Welcome to C++ Programming!!&quot;&lt;/span&gt;
+
+ 
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; TEXT&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 예제처럼 std라는 네임스페이스에 있는 정의를 사용하려면, std:: 접두어를 붙여 해당 정의가 std라는 네임스페이스에 있다는 것을 컴파일러에 알려줘야 합니다.&lt;/p&gt;
+&lt;p&gt;이러한 네임스페이스에 속한 정의를 간단하게 사용하려면 다음과 같은 명령문을 추가하면 됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// std라는 네임스페이스에 속한 정의들은 네임스페이스 이름을 붙이지 않아도 사용할 수 있음.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;다음 예제는 앞서 살펴본 예제와 정확히 같은 동작을 수행합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예제&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;define&lt;/span&gt; TEXT &quot;Welcome to C++ Programming!!&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ 
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; TEXT&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;주석&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%84%9D&quot; aria-label=&quot;주석 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;주석&lt;/h2&gt;
+&lt;p&gt;주석이란 코드에 대한 이해를 돕는 설명을 적거나 디버깅을 위해 작성하는 일종의 메모입니다.&lt;/p&gt;
+&lt;p&gt;C++ 컴파일러는 주석은 무시하고 컴파일하므로, 실행 파일에서는 이러한 주석을 확인할 수 없습니다.&lt;/p&gt;
+&lt;p&gt;C++에서 주석을 작성하는 문법은 다음과 같습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;문법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 한 줄 주석&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/*
+
+여러 줄 주석
+
+*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;C++에서는 여러 줄 주석 안에 또 다른 한 줄 주석을 삽입할 수 있습니다.
+하지만 여러 줄 주석 안에 또 다른 여러 줄 주석은 중첩해서 삽입할 수는 없습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/*
+
+여러 줄 주석
+
+//한 줄 주석 삽입 가능!
+
+*/&lt;/span&gt;
+
+
+&lt;span class=&quot;token comment&quot;&gt;/*
+
+여러 줄 주석
+
+/*여러 줄 주석 삽입 불가*/&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 예제 마지막 줄 */는 주석으로 처리되지 않은 것을 확인할 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[바닥부터 시작하는 C++ (1) - 기본 특징]]></title><description><![CDATA[C++의 특징 C++이 프로그래밍 언어로써 가지는 특징은 다음과 같습니다. C++은 절차 지향적이며 구조적 프로그래밍 언어입니다. C++은 객체 지향 프로그래밍 언어입니다. C++은 일반화 프로그래밍 언어입니다. 이처럼 C…]]></description><link>https://MintyU.github.io/cpp01.md/</link><guid isPermaLink="false">https://MintyU.github.io/cpp01.md/</guid><pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;c의-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#c%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;c의 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;C++의 특징&lt;/h2&gt;
 &lt;p&gt;C++이 프로그래밍 언어로써 가지는 특징은 다음과 같습니다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;C++은 절차 지향적이며 구조적 프로그래밍 언어입니다.&lt;/li&gt;
