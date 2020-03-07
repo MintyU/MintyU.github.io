@@ -1,7 +1,7 @@
 module.exports = {
   /** Site MetaData (Required all)*/
   title: `MintyU`,                           // (* Required)
-  description: `KHU Software Convergence`,          // (* Required)
+  description: `Software Development Blog`,          // (* Required)
   author: `MintyU`,                         // (* Required)
   siteUrl: 'https://MintyU.github.io',                      // (* Required)
     // ex.'https://junhobaik.github.io'
