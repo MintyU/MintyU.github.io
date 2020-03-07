@@ -58,7 +58,9 @@ const Layout = (props: LayoutPropsType) => {
         <meta name="google-site-verification" content={require('../../../config').googleSearchConsole ?? ''} />
         <style>{FaDom.css()}</style>
       </Helmet>
-
+      
+      <script data-ad-client="ca-pub-8801141782730144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      
       <Header siteTitle={data.site.siteMetadata.title} />
       <div id="content">
         <main>{children}</main>
