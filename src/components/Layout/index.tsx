@@ -60,6 +60,7 @@ const Layout = (props: LayoutPropsType) => {
       </Helmet>
       
       <script data-ad-client="ca-pub-8801141782730144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <meta name="naver-site-verification" content="8ea34afdca33221ae8d8e213c2863d4bb4b9caac"/>
       
       <Header siteTitle={data.site.siteMetadata.title} />
       <div id="content">
