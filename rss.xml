@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://MintyU.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 13 Mar 2020 12:08:16 GMT</lastBuildDate><item><title><![CDATA[바닥에서 시작하는 C++ (8) - 반복문]]></title><description><![CDATA[반복문(Iteration Statements…]]></description><link>https://MintyU.github.io/cpp08.md/</link><guid isPermaLink="false">https://MintyU.github.io/cpp08.md/</guid><pubDate>Thu, 05 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;반복문iteration-statements&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%98%EB%B3%B5%EB%AC%B8iteration-statements&quot; aria-label=&quot;반복문iteration statements permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;반복문(Iteration Statements)&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://MintyU.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 14 Mar 2020 06:41:24 GMT</lastBuildDate><item><title><![CDATA[iTerm(Using Zsh)에서 VSCode 열기 [MAC OS]]]></title><description><![CDATA[MAC OS를 사용하는 경우, iTerm에서 VSCode를 간단한 명령어로 호출할 수 있습니다. 다음과 같이 열고자 하는 디렉토리 내에서 라는 명령어를 입력해주면 현재 경로로 VSCode가 실행됩니다.  Setting…]]></description><link>https://MintyU.github.io/VSCodeShortCut.md/</link><guid isPermaLink="false">https://MintyU.github.io/VSCodeShortCut.md/</guid><pubDate>Fri, 06 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MAC OS를 사용하는 경우, iTerm에서 VSCode를 간단한 명령어로 호출할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;다음과 같이 열고자 하는 디렉토리 내에서 &lt;code class=&quot;language-text&quot;&gt;code .&lt;/code&gt;라는 명령어를 입력해주면 현재 경로로 VSCode가 실행됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9ddcc109d4f42afac5507c11730cfc8c/b0254/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.17397998460354%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxklEQVQY042PvQuCUBTFry5SiZNL0FT2ZUP6ntbDAiOUaAhagrCtlmhtaq//oP/39PxIcsrhx7nce+7hXtonVwTJDn3GMeIC49lCEsCWylcxRLSFv96AhVGmaS/3VBn5AXgYg8zjA0Z8QdMNobkrUJ9J3BzLAfWmEqdaf+cl+U6DCVD7cEfn/EL39oZ5ekK1BZQBgzLkGWqh/6AhQ8tbgnS+gM7mMLi8blAYfgLrQnJH9wJQdq6Vv5cGURFGNUNLv3xZmwh8AG6ZkZVE52dDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Terminalexample&quot;
+        title=&quot;Terminalexample&quot;
+        src=&quot;/static/9ddcc109d4f42afac5507c11730cfc8c/799d3/1.png&quot;
+        srcset=&quot;/static/9ddcc109d4f42afac5507c11730cfc8c/00d96/1.png 148w,
+/static/9ddcc109d4f42afac5507c11730cfc8c/0b23c/1.png 295w,
+/static/9ddcc109d4f42afac5507c11730cfc8c/799d3/1.png 590w,
+/static/9ddcc109d4f42afac5507c11730cfc8c/2a3d6/1.png 885w,
+/static/9ddcc109d4f42afac5507c11730cfc8c/ae92f/1.png 1180w,
+/static/9ddcc109d4f42afac5507c11730cfc8c/b0254/1.png 1299w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;setting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#setting&quot; aria-label=&quot;setting permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Setting&lt;/h2&gt;
+&lt;p&gt;하지만, 이를 위해선 간단한 세팅을 해 주어야 합니다.&lt;/p&gt;
+&lt;p&gt;먼저, 현재 저는 iTerm2 Terminal에 oh-my-zsh를 사용하고 있음을 밝힙니다.&lt;/p&gt;
+&lt;p&gt;저처럼 iTerm2에 oh-my-zsh 세팅까지 모두 끝냈다면 ~/.zshrc를 편집하는 방법은 알고 있겠지만, 모른다 하더라도 어렵지는 않습니다.&lt;/p&gt;
+&lt;p&gt;iTerm2 터미널을 열고, 다음과 같이 입력합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ vim ~/.zshrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 명령어를 입력했다면, 다음과 같은 화면을 볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3568666a58d133f7a143688b1a3068b7/9926b/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 88.88888888888889%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACx0lEQVQ4y31U2XLTQBD0E5BXipBEp3Vapw/Z8hXZxMHmhiqq4Af4A97592Z6lHUqPPDQNbujUW9vz9QO7r4s0d52uN0dcLs/YMu462P35h73p484vf+M/eGITXf3WCNxJ987xQEfvnzD6vAOg0XTYD6fYLmaY7ls0O2WWK/nWAkY15s5Nltiga6Tw1kjcbGYoawqVHWNsizRrlZ4OV5iUOQR6jqWZIQ8D1EUj/uqijGZpJjNRprjOk2H59o49lFITJMhLq+u8TwqMJhMcjmtUDRNjtWqEsU52rYUokwj0X8r9dt4nGKzqTRXlokcnMD1PFzEFQZ5FouqWIuIpslEyQjT6UjzcTzUfC434ZqRBFE0hOM4uL62YN0IZP2iJ0y0iD+nqchPA2RZhNEo1D1JGLMs1JwBa5j3fQ+ObcN23J6wLFK92mKRq6q6ThRUMBx6TxAE/nnN79y7rvOUME0iRKoi0IIw9FWV+ZEKgsDTHL8bIkPKelsIb2yn93AqTVmvK20GVdJDGt62hSo23tI3E+kxO84GsZmcgkDIn0dl72F/zVQJ+AM9pU+e56jxVGBZ1kO0zzmCV/Y9F450+dyUUuaNREkSKFFZxkqa532XORpsAmGax0j0DQr/bUp/NSpVlUJYjzPUkzFsUUYfqcQTJcTTdb+37IexKfJUFVGhGQmujSKqNmr68YnOlpgaCjh7WMi1ODY02YCN4SH86V81jL5vlPV7dtz1HzwsykxPp09xHKgiM7QkZI5emmEfjaJzjfFWR0fILxLO4fAKeTaUk2w5yVWEYT97rstOWtptrh3HwNI9YVk3uLp6jVeXr/EslMfhx+8/+PT9Kz6+v8fxKO/ibYv9fqVxOp2grupH1I+oKj4ic2y3W5yOR7w9nfBqusag+/kLs3WHZr5AUY0xygtBqcjL6r8YT2do2lYe5J08untcN1v8BRMgEqNRI5a1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;vim&quot;
+        title=&quot;vim&quot;
+        src=&quot;/static/3568666a58d133f7a143688b1a3068b7/799d3/2.png&quot;
+        srcset=&quot;/static/3568666a58d133f7a143688b1a3068b7/00d96/2.png 148w,
+/static/3568666a58d133f7a143688b1a3068b7/0b23c/2.png 295w,
+/static/3568666a58d133f7a143688b1a3068b7/799d3/2.png 590w,
+/static/3568666a58d133f7a143688b1a3068b7/2a3d6/2.png 885w,
+/static/3568666a58d133f7a143688b1a3068b7/ae92f/2.png 1180w,
+/static/3568666a58d133f7a143688b1a3068b7/9926b/2.png 1296w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Shift + g를 눌러 문서의 맨 아래로 이동한 후, o(아랫줄에 insert)를 눌러 편집모드를 켭니다.&lt;/p&gt;
+&lt;p&gt;그리고 다음과 같이 입력해줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;code () {VSCODE_CWD=&amp;quot;$PWD&amp;quot; open -n -b &amp;quot;com.microsoft.VSCode&amp;quot; --args $* ;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;입력이 되었다면, esc버튼을 눌러 편집 모드를 끝낸 뒤에(왼쪽 아래 normal 확인),&lt;/p&gt;
+&lt;p&gt;:wq를 입력하여 저장하고 나가줍니다.(&quot;:&quot;을 누르면 명령어 입력창이 활성화됩니다.)&lt;/p&gt;
+&lt;p&gt;그 후 터미널에서 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하면 터미널에서 명령어를 통해 VSCode를 실행할 수 있게 됩니다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8f584aa5662397956467f3127df98c15/faacb/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 12.788906009244991%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAc0lEQVQI12PQd7D9b2Rp99/A0va/gQWQbW3/38jK7r8hUMzc3vm/g4fPf2dv//9OXn5gPkgOH2Zg1jD4z6Rh/J/bwAqMGVQN/jOoGwGx4X8GNRxYHQcGyXHoGf1n17X8L2rp9F/QzAFsICPQAnIwg7rxfwC5N1hsOwAV2wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;source&quot;
+        title=&quot;source&quot;
+        src=&quot;/static/8f584aa5662397956467f3127df98c15/799d3/3.png&quot;
+        srcset=&quot;/static/8f584aa5662397956467f3127df98c15/00d96/3.png 148w,
+/static/8f584aa5662397956467f3127df98c15/0b23c/3.png 295w,
+/static/8f584aa5662397956467f3127df98c15/799d3/3.png 590w,
+/static/8f584aa5662397956467f3127df98c15/2a3d6/3.png 885w,
+/static/8f584aa5662397956467f3127df98c15/ae92f/3.png 1180w,
+/static/8f584aa5662397956467f3127df98c15/faacb/3.png 1298w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[바닥에서 시작하는 C++ (8) - 반복문]]></title><description><![CDATA[반복문(Iteration Statements…]]></description><link>https://MintyU.github.io/cpp08.md/</link><guid isPermaLink="false">https://MintyU.github.io/cpp08.md/</guid><pubDate>Thu, 05 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;반복문iteration-statements&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%98%EB%B3%B5%EB%AC%B8iteration-statements&quot; aria-label=&quot;반복문iteration statements permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;반복문(Iteration Statements)&lt;/h2&gt;
 &lt;p&gt;반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다.&lt;/p&gt;
 &lt;p&gt;프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로, 가장 많이 사용되는 제어문 중 하나입니다.&lt;/p&gt;
 &lt;p&gt;C++에서 사용되는 대표적인 반복문의 형태는 다음과 같습니다.&lt;/p&gt;
