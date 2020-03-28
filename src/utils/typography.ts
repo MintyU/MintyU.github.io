@@ -1,27 +1,29 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: '17px',
-  baseLineHeight: 1.777,
+  baseFontSize: '16px',
+  baseLineHeight: 1.666,
   headerFontFamily: ['Nanum Gothic'],
   bodyFontFamily: ['Nanum Gothic'],
 });
 
-const googleFont = [
+const googleFonts: { name: string; bold?: number[] }[] = [
   {
     name: 'Nanum Gothic',
     bold: [400, 700],
   },
   {
-    name: 'Source Code Pro',
+    name: 'Nanum Gothic Coding',
     bold: [400, 700],
   },
   {
-    name: 'Noto Sans KR',
+    name: 'Noto Serif KR',
     bold: [300, 400, 700],
   },
   { name: 'Raleway' },
-]
+];
+
+const googleFont = googleFonts
   .map(v => {
     if (v.bold) {
       return `${v.name.replace(/ /gi, '+')}:${v.bold.toString()}`;
