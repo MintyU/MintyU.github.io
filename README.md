@@ -1,3 +1,11 @@
+# MintyU Development Blog
+
+- Software Development Blog
+- C++, macOS, Python, Linux(Ubuntu)
+- Built with Gatsby("Borderless" Theme), Detailed instructions are below.
+
+---
+
 # "Borderless" Theme, Built with Gatsby
 
 - **[Documents (Korean)](<https://github.com/junhobaik/junhobaik.github.io/wiki/Document-(Borderless)>)**  
