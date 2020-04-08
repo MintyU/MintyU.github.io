@@ -2,8 +2,7 @@
 title : Linux(Ubuntu)로 살아보기 (2) - Unite, Caffeine
 date : 2020-03-29
 tags:
-  - Ubuntu
-  - Linux
+  - Linux(Ubuntu)
 keywords:
   - Linux
   - Ubuntu
