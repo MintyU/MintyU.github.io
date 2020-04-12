@@ -214,3 +214,11 @@ sort 함수는 다음과 같이 사용할 수 있습니다.
 이 포스트에서는 "array의 정렬이 가능하다!" 까지만 이해해도 충분합니다.
 
 반복자(iterator)와 `sort( )`에 대한 설명은 다음에 더 자세히 하도록 하겠습니다.
+
+## Summary
+
+이번 포스트에서는 STL Sequence Container중 하나인 `std::array`, 즉 배열에 대해 알아보았습니다.
+
+또한, 이 배열의 값에 접근하고, 길이를 출력하고, 정렬하는 방법에 대해서도 알아보았습니다.
+
+이 `std::array`에 대한 더 자세한 정보는 [이 링크](https://docs.microsoft.com/ko-kr/cpp/standard-library/array-class-stl?view=vs-2019)를 통해 볼 수 있습니다.
