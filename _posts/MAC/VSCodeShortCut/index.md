@@ -3,6 +3,7 @@ title : iTerm(Using Zsh)에서 VSCode 열기 [MAC OS]
 date : 2020-03-06
 tags:
   - MAC
+  - VSCode
 keywords:
   - Terminal
   - 터미널
