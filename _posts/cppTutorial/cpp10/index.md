@@ -29,7 +29,7 @@ STL Container에 관한 더 자세한 설명은 [이 링크](https://docs.micros
 
 ## Why STL Array?
 
-[앞선 포스트](https://mintyu.github.io/cpp09.md/)에서 설명했듯, 이미 C++에는 C 스타일의 static array를 지원하고 있었습니다.
+[앞선 포스트](https://mintyu.github.io/cpp09/)에서 설명했듯, 이미 C++에는 C 스타일의 static array를 지원하고 있었습니다.
 
 하지만, 이 static array는 꽤나 사용하기 불편했습니다.
 
@@ -82,7 +82,7 @@ array를 사용하기 위해서는 우선 `#include <array>`로 array 헤더파�
 
 `arr3`과 같이 주어진 크기보다 많은 수의 원소는 대입할 수 없습니다.
 
-또한, [static array](https://mintyu.github.io/cpp09.md/)와는 다르게 `arr4`처럼 크기를 입력하지 않으면 오류가 발생합니다.
+또한, [static array](https://mintyu.github.io/cpp09/)와는 다르게 `arr4`처럼 크기를 입력하지 않으면 오류가 발생합니다.
 
 ### index 접근(at)
 

@@ -79,7 +79,7 @@ C++에서 if / else 문의 문법은 다음과 같습니다.
 > }
 > ```
 
-위 식은 [여기](https://mintyu.github.io/cpp06.md/#%EC%82%BC%ED%95%AD-%EC%97%B0%EC%82%B0%EC%9E%90ternary-operator)에 설명했듯 아래 식처럼 삼항연산자를 통해 짧게 나타낼 수도 있습니다.
+위 식은 [여기](https://mintyu.github.io/cpp06/#%EC%82%BC%ED%95%AD-%EC%97%B0%EC%82%B0%EC%9E%90ternary-operator)에 설명했듯 아래 식처럼 삼항연산자를 통해 짧게 나타낼 수도 있습니다.
 > ``` cpp
 > 조건식 ? 반환값1(True) : 반환값2(False)
 > 
