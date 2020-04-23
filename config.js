@@ -3,7 +3,7 @@ module.exports = {
   title: `MintyU`,                           // (* Required)
   description: `Software Development Blog`,          // (* Required)
   author: `MintyU`,                         // (* Required)
-  siteUrl: 'https://MintyU.github.io',                      // (* Required)
+  siteUrl: 'https://mintyu.github.io',                      // (* Required)
     // ex.'https://junhobaik.github.io'
     // ex.'https://junhobaik.github.io/' << X, Do not enter "/" at the end.
 
@@ -21,7 +21,7 @@ module.exports = {
   website: 'https://MintyU.github.io',           // ex.'https://junhobaik.github.io'
   linkedin: '',                                                          // ex.'https://www.linkedin.com/in/junho-baik-16073a19ab'
   facebook: '',                                                          // ex.'https://www.facebook.com/zuck' or 'https://www.facebook.com/profile.php?id=000000000000000'
-  instagram: '',                                                         // ex.'https://www.instagram.com/junhobaik'
+  instagram: 'https://www.instagram.com/minty_u_',                                                         // ex.'https://www.instagram.com/junhobaik'
   github: 'https://github.com/MintyU',                                                            // ex.'https://github.com/junhobaik'
 
   /** Post */
