@@ -8,7 +8,10 @@ keywords:
   - Object-Oriented Programming
   - 객체지향 프로그래밍
   - File io
+  - fstream
   - 파일 입출력
+  - ofstream
+  - ifstream
 ---
 
 ## fstream
@@ -123,6 +126,51 @@ main함수 안의 반복문을 통해 파일에서 한 단어씩 읽어온 후, 
 
 사용 후 닫지 않는다면 열려있는동안 파일이 Lock되거나 다른 사람이 이용하지 못하게 될 수 있으므로, 사용 후에는 꼭 닫아주도록 합시다.
 
+#### 한 줄씩 입력을 받고 싶다면?
+
+ifstream도 cin과 마찬가지로 화이트스페이스(whitespace)를 기준으로 입력을 구분합니다.
+
+따라서, 스페이스바를 통한 공백이나 줄바꿈을 통해 입력을 구분하게 됩니다.
+
+하지만, 단어가 아닌 문장으로, 띄어쓰기에 상관없이 한 줄씩 입력을 받고 싶다면 `std::getline(입력스트림 객체, 문자열 변수)`를 이용하면 됩니다.
+
+> ```
+> lorem.txt
+>
+> Lorem ipsum dolor sit amet,
+> consectetur adipiscing elit,
+> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+> ```
+
+위와 같은 텍스트가 있다고 가정한 후, 한 줄씩 읽어와서 출력해주는 예제입니다.
+
+```cpp
+#include <fstream>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    ifstream fin("lorem.txt"); // fin 객체 생성(cin 처럼 이용!)
+    if (!fin)
+    {
+        cout << "Error, no such file exists" << endl;
+        exit(100);
+    } // 파일 열림 확인
+
+    string str;
+    while (getline(fin, str)) // 파일이 끝날때까지 한 줄씩 읽어오기
+    {
+        cout << str << endl;
+    }
+
+    fin.close(); // 파일 닫기
+
+    return 0;
+}
+```
+
 ### ofstream
 
 ofstream은 데이터를 외부 파일로 저장하는 역할을 합니다.
@@ -162,6 +210,7 @@ int main()
         fout << i << endl;
     }
 	return 0;
+    fout.close();
 }
 ```
 
@@ -177,3 +226,9 @@ int main()
 > 5
 >
 > ```
+
+여기까지 C++로 외부 파일과 입출력을 통해 상호작용하는 방법에 대해 알아보았습니다.
+
+아마 다른 언어로 이미 파일 입출력을 학습했던 경험이 있다면 크게 어렵게 느껴지지는 않을 것이라 예상됩니다.
+
+(파이썬에서의 파일 입출력 방식과 굉장히 비슷하다고 느꼈습니다.)
