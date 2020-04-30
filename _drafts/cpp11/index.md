@@ -128,3 +128,52 @@ main함수 안의 반복문을 통해 파일에서 한 단어씩 읽어온 후, 
 ofstream은 데이터를 외부 파일로 저장하는 역할을 합니다.
 
 ifstream과 마찬가지로, ofstream 객체를 만들고 데이터를 내보낼 파일 이름을 지정해줍니다.
+
+```cpp
+ofstream fout("result.txt");
+// 선언과 동시에 파일 이름 지정
+
+ofstream fout;
+fout.open("result.txt");
+// 선언 후 파일 이름 지정
+```
+
+이렇게 선언한 후, 앞에서 fin을 cin처럼 사용한것과 같이 fout을 cout처럼 사용해주면 됩니다.
+
+ofstream에서는 지정해준 파일의 이름이 없더라도 자동으로 생성해주므로 굳이 파일이 없는 경우 오류를 출력할 필요가 없습니다.
+
+또한, 이미 내용이 저장되어 있는 파일을 지정하고 데이터를 저장해주었을 경우 내용을 덮어쓰게 됩니다.
+
+**즉, 이미 저장되어있던 내용은 삭제되고, 새로운 내용이 저장됩니다.**
+
+다음은 ofstream을 통해 `result.txt`에 1부터 5까지 줄을 바꾸어 하나씩 저장하는 예제입니다.
+
+```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	ofstream fout("result.txt");
+
+    for(int i = 1; i <= 5; i++)
+    {
+        fout << i << endl;
+    }
+	return 0;
+}
+```
+
+코드를 실행하면 실행한 디렉토리 안에 다음과 같은 텍스트 파일이 생성됩니다.
+
+> ```
+> result.txt
+>
+> 1
+> 2
+> 3
+> 4
+> 5
+>
+> ```
