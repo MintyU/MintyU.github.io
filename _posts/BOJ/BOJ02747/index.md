@@ -1,6 +1,6 @@
 ---
-title : 백준 [2747] - 피보나치 수(C++)
-date : 2020-03-02
+title: 백준 [2747] - 피보나치 수(C++)
+date: 2020-03-02
 tags:
   - 백준알고리즘(C++)
 keywords:
@@ -36,10 +36,9 @@ n이 주어졌을 때, n번째 피보나치 수를 구하는 프로그램을 작
 
 `10`
 
-#### <예제 출력 1> 
+#### <예제 출력 1>
 
 `55`
-
 
 ## 풀이
 
@@ -53,7 +52,7 @@ n이 주어졌을 때, n번째 피보나치 수를 구하는 프로그램을 작
 
 따라서, 다음과 같이 재귀형으로 함수를 호출하며 피보나치 수를 구할 수 있다.
 
-``` cpp
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -61,16 +60,16 @@ int fib(int a) {
 
     switch (a)
     {
-    
+
     case 0:
         return 0;
         break;
-    
+
     case 1:
         return 1;
         break;
-    
-    
+
+
     default:
         return fib(a-1) + fib(a-2);
         break;
@@ -81,11 +80,11 @@ int fib(int a) {
 int main() {
 
     int a;
-    
+
     cin >> a;
-    
+
     cout << fib(a);
-    
+
     return 0;
 }
 ```
@@ -116,8 +115,7 @@ int main() {
 
 시간이 초과되지 않기 위해서는, 조금 근본적인 방법으로부터 접근할 필요가 있다.
 
-
-``` cpp
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -142,10 +140,8 @@ int main() {
 }
 ```
 
-
 위의 코드는 1차원 배열을 통해 함수를 재귀호출하지 않고 피보나치 수를 구한다.
 
 배열의 크기는 상관없기에 넉넉하게 잡았으며, 배열 안에 들어갈 수는 integer의 범위를 벗어날 수도 있기에 long long으로 설정해주었다.
 
 이 예제를 실행하고 45번째 피보나치 수를 구해도, 심지어 100번째 피보나치 수를 구한다 하더라도 즉각 답을 출력해주는 것을 볼 수 있다.
-
