@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Jul 2020 02:49:48 GMT</lastBuildDate><item><title><![CDATA[VSCode 괄호, 따옴표 Tab으로 나가기 [VSCode]]]></title><description><![CDATA[VSCode 괄호 Tab키로 나가기 VSCode…]]></description><link>https://mintyu.github.io/TabOut/</link><guid isPermaLink="false">https://mintyu.github.io/TabOut/</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-괄호-tab키로-나가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-%EA%B4%84%ED%98%B8-tab%ED%82%A4%EB%A1%9C-%EB%82%98%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;vscode 괄호 tab키로 나가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VSCode 괄호 Tab키로 나가기&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Jul 2020 13:00:43 GMT</lastBuildDate><item><title><![CDATA[백준 [14467] - 소가 길을 건너간 이유 1]]></title><description><![CDATA[…]]></description><link>https://mintyu.github.io/BOJ14467/</link><guid isPermaLink="false">https://mintyu.github.io/BOJ14467/</guid><pubDate>Sat, 04 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;문제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제&lt;/h2&gt;
+&lt;p&gt;닭이 길을 건너간 이유는 과학적으로 깊게 연구가 되어 있지만, 의외로 소가 길을 건너간 이유는 거의 연구된 적이 없다. 이 주제에 관심을 가지고 있었던 농부 존은 한 대학으로부터 소가 길을 건너는 이유에 대한 연구 제의를 받게 되었다.&lt;/p&gt;
+&lt;p&gt;존이 할 일은 소가 길을 건너는 것을 관찰하는 것이다. 존은 소의 위치를 N번 관찰하는데, 각 관찰은 소의 번호와 소의 위치 하나씩으로 이루어져 있다. 존은 소를 10마리 가지고 있으므로 소의 번호는 1 이상 10 이하의 정수고, 소의 위치는 길의 왼쪽과 오른쪽을 의미하는 0과 1 중 하나다.&lt;/p&gt;
+&lt;p&gt;이 관찰 기록을 가지고 소가 최소 몇 번 길을 건넜는지 알아보자. 즉 같은 번호의 소가 위치를 바꾼 것이 몇 번인지 세면 된다.&lt;/p&gt;
+&lt;h2 id=&quot;입력&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%85%EB%A0%A5&quot; aria-label=&quot;입력 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;입력&lt;/h2&gt;
+&lt;p&gt;첫 줄에 관찰 횟수 N이 주어진다. N은 100 이하의 양의 정수이다. 다음 N줄에는 한 줄에 하나씩 관찰 결과가 주어진다. 관찰 결과는 소의 번호와 위치(0 또는 1)로 이루어져 있다.&lt;/p&gt;
+&lt;h2 id=&quot;출력&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B6%9C%EB%A0%A5&quot; aria-label=&quot;출력 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;출력&lt;/h2&gt;
+&lt;p&gt;첫 줄에 소가 길을 건너간 최소 횟수를 출력한다.&lt;/p&gt;
+&lt;h4 id=&quot;예제-입력-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%A0%9C-%EC%9E%85%EB%A0%A5-1&quot; aria-label=&quot;예제 입력 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&amp;#x3C;예제 입력 1&gt;&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;8
+3 1
+3 0
+6 0
+2 1
+4 1
+3 0
+4 0
+3 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5 id=&quot;예제-출력-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%A0%9C-%EC%B6%9C%EB%A0%A5-1&quot; aria-label=&quot;예제 출력 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&amp;#x3C;예제 출력 1&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;3&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;풀이&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%92%80%EC%9D%B4&quot; aria-label=&quot;풀이 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;풀이&lt;/h2&gt;
+&lt;p&gt;문제의 핵심은 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;소의 위치는 0과 1로 표현된다.&lt;/li&gt;
+&lt;li&gt;위치가 0에서 1, 또는 1에서 0으로 바뀐 경우가 길을 건넌 경우에 해당한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;문제의 입력 형식과 비교해 보았을 때, &lt;strong&gt;소의 위치가 처음 초기화되는 경우&lt;/strong&gt;에는 길을 건넌 것으로 카운트하지 않으며, &lt;strong&gt;소의 위치가 그대로인 경우&lt;/strong&gt;에도 카운트하지 않습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; cow&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 소의 초기 위치를 -1로 설정(default)&lt;/span&gt;
+
+    cin &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; count &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; cownum&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pos&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        cin &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; cownum &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; pos&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// test case 입력&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cow&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cownum&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 소의 위치가 default인 경우&lt;/span&gt;
+
+            cow&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cownum&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pos&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 입력값으로 초기화&lt;/span&gt;
+
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cow&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cownum&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cow&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cownum&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// 소의 위치가 -1이 아닌 다른 값으로 초기화되어있으며, 이미 초기화된 값과 다른 위치값을 입력받은 경우&lt;/span&gt;
+
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            cow&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cownum&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pos&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 입력값으로 위치 재설정&lt;/span&gt;
+
+            count &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 이동 횟수 증가!&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 코드와 같이 &lt;strong&gt;소의 위치가 처음 초기화되는 경우&lt;/strong&gt;와 &lt;strong&gt;소의 위치가 그대로인 경우&lt;/strong&gt;만 체크해주더라도 쉽게 풀 수 있는 문제였습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[VSCode 괄호, 따옴표 Tab으로 나가기 [VSCode]]]></title><description><![CDATA[VSCode 괄호 Tab키로 나가기 VSCode…]]></description><link>https://mintyu.github.io/TabOut/</link><guid isPermaLink="false">https://mintyu.github.io/TabOut/</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-괄호-tab키로-나가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-%EA%B4%84%ED%98%B8-tab%ED%82%A4%EB%A1%9C-%EB%82%98%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;vscode 괄호 tab키로 나가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VSCode 괄호 Tab키로 나가기&lt;/h2&gt;
 &lt;p&gt;VSCode에는 기본적으로 괄호를 한 쪽&lt;code class=&quot;language-text&quot;&gt;&amp;quot; ( &amp;quot;&lt;/code&gt; 입력하면 나머지 한 쪽도 자동 완성되어 &lt;code class=&quot;language-text&quot;&gt;&amp;quot; ( ) &amp;quot;&lt;/code&gt;이렇게 입력됩니다.&lt;/p&gt;
 &lt;p&gt;이 자동완성 기능을 끄는 방법도 있겠지만, 어차피 괄호를 열었다면 닫는 버튼을 한번 더 입력해야하는 것은 마찬가지입니다.&lt;/p&gt;
 &lt;p&gt;다른 IDE나 Editor에서는 &lt;code class=&quot;language-text&quot;&gt;Tab&lt;/code&gt;버튼을 통해 괄호나 따옴표 밖으로 나가는 것을 지원하는것 같았는데 VSCode 자체에서는 그 기능을 찾을 수가 없었습니다.&lt;/p&gt;
@@ -1905,114 +1973,4 @@ cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; 
 &lt;h2 id=&quot;array-template-class&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#array-template-class&quot; aria-label=&quot;array template class permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array Template Class?&lt;/h2&gt;
 &lt;p&gt;C++11부터는 array의 템플릿 클래스가 추가되었습니다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;#include &amp;lt;array&amp;gt;&lt;/code&gt;를 통해 기존 C 스타일이 아닌 새로운 형태로 더 간편하게 배열을 정의하고 이용할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;다음 포스트에서는 이 내용에 대해 다루도록 하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[iTerm(Using Zsh)에서 VSCode 열기 [MAC OS]]]></title><description><![CDATA[MAC OS를 사용하는 경우, iTerm에서 VSCode를 간단한 명령어로 호출할 수 있습니다. 다음과 같이 열고자 하는 디렉토리 내에서 라는 명령어를 입력해주면 현재 경로로 VSCode가 실행됩니다.  Setting…]]></description><link>https://mintyu.github.io/VSCodeShortCut/</link><guid isPermaLink="false">https://mintyu.github.io/VSCodeShortCut/</guid><pubDate>Fri, 06 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MAC OS를 사용하는 경우, iTerm에서 VSCode를 간단한 명령어로 호출할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;다음과 같이 열고자 하는 디렉토리 내에서 &lt;code class=&quot;language-text&quot;&gt;code .&lt;/code&gt;라는 명령어를 입력해주면 현재 경로로 VSCode가 실행됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9ddcc109d4f42afac5507c11730cfc8c/ffaa5/1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 26.351351351351354%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxklEQVQY042PvQuCUBTFry5SiZNL0FT2ZUP6ntbDAiOUaAhagrCtlmhtaq//oP/39PxIcsrhx7nce+7hXtonVwTJDn3GMeIC49lCEsCWylcxRLSFv96AhVGmaS/3VBn5AXgYg8zjA0Z8QdMNobkrUJ9J3BzLAfWmEqdaf+cl+U6DCVD7cEfn/EL39oZ5ekK1BZQBgzLkGWqh/6AhQ8tbgnS+gM7mMLi8blAYfgLrQnJH9wJQdq6Vv5cGURFGNUNLv3xZmwh8AG6ZkZVE52dDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Terminalexample&quot;
-        title=&quot;Terminalexample&quot;
-        src=&quot;/static/9ddcc109d4f42afac5507c11730cfc8c/fcda8/1.png&quot;
-        srcset=&quot;/static/9ddcc109d4f42afac5507c11730cfc8c/12f09/1.png 148w,
-/static/9ddcc109d4f42afac5507c11730cfc8c/e4a3f/1.png 295w,
-/static/9ddcc109d4f42afac5507c11730cfc8c/fcda8/1.png 590w,
-/static/9ddcc109d4f42afac5507c11730cfc8c/efc66/1.png 885w,
-/static/9ddcc109d4f42afac5507c11730cfc8c/c83ae/1.png 1180w,
-/static/9ddcc109d4f42afac5507c11730cfc8c/ffaa5/1.png 1299w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;setting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#setting&quot; aria-label=&quot;setting permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Setting&lt;/h2&gt;
-&lt;p&gt;하지만, 이를 위해선 간단한 세팅을 해 주어야 합니다.&lt;/p&gt;
-&lt;p&gt;먼저, 현재 저는 iTerm2 Terminal에 oh-my-zsh를 사용하고 있음을 밝힙니다.&lt;/p&gt;
-&lt;p&gt;저처럼 iTerm2에 oh-my-zsh 세팅까지 모두 끝냈다면 ~/.zshrc를 편집하는 방법은 알고 있겠지만, 모른다 하더라도 어렵지는 않습니다.&lt;/p&gt;
-&lt;p&gt;iTerm2 터미널을 열고, 다음과 같이 입력합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ vim ~/.zshrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;위 명령어를 입력했다면, 다음과 같은 화면을 볼 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3568666a58d133f7a143688b1a3068b7/86a1e/2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 89.1891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACx0lEQVQ4y31U2XLTQBD0E5BXipBEp3Vapw/Z8hXZxMHmhiqq4Af4A97592Z6lHUqPPDQNbujUW9vz9QO7r4s0d52uN0dcLs/YMu462P35h73p484vf+M/eGITXf3WCNxJ987xQEfvnzD6vAOg0XTYD6fYLmaY7ls0O2WWK/nWAkY15s5Nltiga6Tw1kjcbGYoawqVHWNsizRrlZ4OV5iUOQR6jqWZIQ8D1EUj/uqijGZpJjNRprjOk2H59o49lFITJMhLq+u8TwqMJhMcjmtUDRNjtWqEsU52rYUokwj0X8r9dt4nGKzqTRXlokcnMD1PFzEFQZ5FouqWIuIpslEyQjT6UjzcTzUfC434ZqRBFE0hOM4uL62YN0IZP2iJ0y0iD+nqchPA2RZhNEo1D1JGLMs1JwBa5j3fQ+ObcN23J6wLFK92mKRq6q6ThRUMBx6TxAE/nnN79y7rvOUME0iRKoi0IIw9FWV+ZEKgsDTHL8bIkPKelsIb2yn93AqTVmvK20GVdJDGt62hSo23tI3E+kxO84GsZmcgkDIn0dl72F/zVQJ+AM9pU+e56jxVGBZ1kO0zzmCV/Y9F450+dyUUuaNREkSKFFZxkqa532XORpsAmGax0j0DQr/bUp/NSpVlUJYjzPUkzFsUUYfqcQTJcTTdb+37IexKfJUFVGhGQmujSKqNmr68YnOlpgaCjh7WMi1ODY02YCN4SH86V81jL5vlPV7dtz1HzwsykxPp09xHKgiM7QkZI5emmEfjaJzjfFWR0fILxLO4fAKeTaUk2w5yVWEYT97rstOWtptrh3HwNI9YVk3uLp6jVeXr/EslMfhx+8/+PT9Kz6+v8fxKO/ibYv9fqVxOp2grupH1I+oKj4ic2y3W5yOR7w9nfBqusag+/kLs3WHZr5AUY0xygtBqcjL6r8YT2do2lYe5J08untcN1v8BRMgEqNRI5a1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;vim&quot;
-        title=&quot;vim&quot;
-        src=&quot;/static/3568666a58d133f7a143688b1a3068b7/fcda8/2.png&quot;
-        srcset=&quot;/static/3568666a58d133f7a143688b1a3068b7/12f09/2.png 148w,
-/static/3568666a58d133f7a143688b1a3068b7/e4a3f/2.png 295w,
-/static/3568666a58d133f7a143688b1a3068b7/fcda8/2.png 590w,
-/static/3568666a58d133f7a143688b1a3068b7/efc66/2.png 885w,
-/static/3568666a58d133f7a143688b1a3068b7/c83ae/2.png 1180w,
-/static/3568666a58d133f7a143688b1a3068b7/86a1e/2.png 1296w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Shift + g를 눌러 문서의 맨 아래로 이동한 후, o(아랫줄에 insert)를 눌러 편집모드를 켭니다.&lt;/p&gt;
-&lt;p&gt;그리고 다음과 같이 입력해줍니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;code () {VSCODE_CWD=&amp;quot;$PWD&amp;quot; open -n -b &amp;quot;com.microsoft.VSCode&amp;quot; --args $* ;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;입력이 되었다면, esc버튼을 눌러 편집 모드를 끝낸 뒤에(왼쪽 아래 normal 확인),&lt;/p&gt;
-&lt;p&gt;:wq를 입력하여 저장하고 나가줍니다.(&quot;:&quot;을 누르면 명령어 입력창이 활성화됩니다.)&lt;/p&gt;
-&lt;p&gt;그 후 터미널에서 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하면 터미널에서 명령어를 통해 VSCode를 실행할 수 있게 됩니다!&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8f584aa5662397956467f3127df98c15/e4611/3.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 12.837837837837837%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAc0lEQVQI12PQd7D9b2Rp99/A0va/gQWQbW3/38jK7r8hUMzc3vm/g4fPf2dv//9OXn5gPkgOH2Zg1jD4z6Rh/J/bwAqMGVQN/jOoGwGx4X8GNRxYHQcGyXHoGf1n17X8L2rp9F/QzAFsICPQAnIwg7rxfwC5N1hsOwAV2wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;source&quot;
-        title=&quot;source&quot;
-        src=&quot;/static/8f584aa5662397956467f3127df98c15/fcda8/3.png&quot;
-        srcset=&quot;/static/8f584aa5662397956467f3127df98c15/12f09/3.png 148w,
-/static/8f584aa5662397956467f3127df98c15/e4a3f/3.png 295w,
-/static/8f584aa5662397956467f3127df98c15/fcda8/3.png 590w,
-/static/8f584aa5662397956467f3127df98c15/efc66/3.png 885w,
-/static/8f584aa5662397956467f3127df98c15/c83ae/3.png 1180w,
-/static/8f584aa5662397956467f3127df98c15/e4611/3.png 1298w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;다음 포스트에서는 이 내용에 대해 다루도록 하겠습니다.&lt;/p&gt;</content:encoded></item></channel></rss>
