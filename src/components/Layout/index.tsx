@@ -64,7 +64,6 @@ const Layout = (props: LayoutPropsType) => {
         <style>{FaDom.css()}</style>
       </Helmet>
 
-
       <div id="layout" className={isDark ? 'dark' : 'light'}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div id="content">
