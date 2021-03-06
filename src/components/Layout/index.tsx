@@ -60,8 +60,10 @@ const Layout = (props: LayoutPropsType) => {
         <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
         <link href={`https://fonts.googleapis.com/css?family=${googleFont}`} rel="stylesheet" />
         <meta name="google-site-verification" content={require('../../../config').googleSearchConsole ?? ''} />
+        <meta name="naver-site-verification" content="a2ea7ceec64c40af0f5f969be9e3c0afeab7730f" />
         <style>{FaDom.css()}</style>
       </Helmet>
+
 
       <div id="layout" className={isDark ? 'dark' : 'light'}>
         <Header siteTitle={data.site.siteMetadata.title} />
