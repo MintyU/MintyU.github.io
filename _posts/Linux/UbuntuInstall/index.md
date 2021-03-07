@@ -3,7 +3,6 @@ title : Linux(Ubuntu)로 살아보기 (1) - 설치 및 설정
 date : 2020-03-22
 tags:
   - Linux(Ubuntu)
-  - 
 keywords:
   - Linux
   - Ubuntu

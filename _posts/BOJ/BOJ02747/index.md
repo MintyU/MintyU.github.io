@@ -4,7 +4,7 @@ date: 2020-03-02
 tags:
   - 백준알고리즘(C++)
 keywords:
-  - C
+  - C++
   - Object-Oriented Programming
   - 객체지향 프로그래밍
   - 피보나치
