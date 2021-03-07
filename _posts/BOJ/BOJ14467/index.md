@@ -2,13 +2,28 @@
 title: 백준 [14467] - 소가 길을 건너간 이유 1
 date: 2020-07-04
 tags:
-  - 백준알고리즘(C++)
+  - BOJ(C++)
 keywords:
   - C++
+  - cpp
   - Object-Oriented Programming
   - 객체지향 프로그래밍
   - 알고리즘
+  - 백준
 ---
+
+## 문제 정보
+
+#### 제한
+- 시간 제한 : 2초
+- 메모리 제한 : 512MB
+
+#### 출처
+- Olympiad > USA Computing Olympiad > 2016-2017 Season > USACO 2017 February Contest > Bronze 1번
+
+#### 알고리즘 분류
+- 구현
+
 
 ## 문제
 
