@@ -37,10 +37,10 @@ encoded = []
 for line in tokenized: #입력 데이터에서 1줄씩 문장을 읽음
     temp = []
     for w in line: #각 줄에서 1개씩 글자를 읽음
-      try:
-        temp.append(word_to_index[w]) # 글자를 해당되는 정수로 변환
-      except KeyError: # 단어 집합에 없는 단어일 경우 unk로 대체된다.
-        temp.append(word_to_index['unk']) # unk의 인덱스로 변환
+    	try:
+        	temp.append(word_to_index[w]) # 글자를 해당되는 정수로 변환
+      	except KeyError: # 단어 집합에 없는 단어일 경우 unk로 대체된다.
+        	temp.append(word_to_index['unk']) # unk의 인덱스로 변환
 
     encoded.append(temp)
 
