@@ -61,6 +61,7 @@ const Layout = (props: LayoutPropsType) => {
         <link href={`https://fonts.googleapis.com/css?family=${googleFont}`} rel="stylesheet" />
         <meta name="google-site-verification" content={require('../../../config').googleSearchConsole ?? ''} />
         <meta name="naver-site-verification" content="a2ea7ceec64c40af0f5f969be9e3c0afeab7730f" />
+        <script data-ad-client="ca-pub-8801141782730144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <style>{FaDom.css()}</style>
       </Helmet>
 
