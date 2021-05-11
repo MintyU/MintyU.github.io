@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 May 2021 08:25:42 GMT</lastBuildDate><item><title><![CDATA[자연어 처리(NLP)의 전처리 - 원-핫 인코딩]]></title><description><![CDATA[원-핫 인코딩(One-Hot Encoding) 지난 게시물인 정수 인코딩에서는 Vocabulary…]]></description><link>https://mintyu.github.io/Pytorch04/</link><guid isPermaLink="false">https://mintyu.github.io/Pytorch04/</guid><pubDate>Sun, 25 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;원-핫-인코딩one-hot-encoding&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9one-hot-encoding&quot; aria-label=&quot;원 핫 인코딩one hot encoding permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;원-핫 인코딩(One-Hot Encoding)&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 May 2021 05:09:18 GMT</lastBuildDate><item><title><![CDATA[자연어 처리(NLP)의 전처리 - 워드 임베딩]]></title><description><![CDATA[희소 표현(Sparce Representation…]]></description><link>https://mintyu.github.io/Pytorch05/</link><guid isPermaLink="false">https://mintyu.github.io/Pytorch05/</guid><pubDate>Sun, 02 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;희소-표현sparce-representation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9D%AC%EC%86%8C-%ED%91%9C%ED%98%84sparce-representation&quot; aria-label=&quot;희소 표현sparce representation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;희소 표현(Sparce Representation)&lt;/h2&gt;
+&lt;p&gt;희소 표현이란 데이터가 희소하다는 의미입니다. 여기서 데이터란 &apos;우리가 관심을 갖는, 의미있는 정보&apos;정도로 해석할 수 있을 것 같습니다.&lt;/p&gt;
+&lt;p&gt;이해하기 쉽게 예를 들어 설명해봅시다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[0, 1, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 1, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0, 0]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 벡터들은 희소 벡터라고 할 수 있습니다. 우리가 알고싶어 하는 정보의 인덱스만 1로 표현되고, 나머지 원소들은 0으로 이루어진 벡터입니다. 따라서 실제 표현하는 데이터의 양은 희소(Sparse)하며, 데이터를 표현하지 않는 나머지는 모두 0으로 표현됩니다.&lt;/p&gt;
+&lt;p&gt;이와 같이 표현하는 것을 희소 표현이라고 합니다.&lt;/p&gt;
+&lt;p&gt;지난 &lt;a href=&quot;https://mintyu.github.io/Pytorch04/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;원-핫 인코딩&lt;/a&gt; 게시물에서 배운 원-핫 인코딩을 통해 나온 원-핫 벡터 또한 희소 벡터입니다.&lt;/p&gt;
+&lt;h2 id=&quot;밀집-표현dense-representation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%80%EC%A7%91-%ED%91%9C%ED%98%84dense-representation&quot; aria-label=&quot;밀집 표현dense representation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;밀집 표현(Dense Representation)&lt;/h2&gt;
+&lt;p&gt;밀집 표현(Dense Representation)은 희소 표현(Sparse Representation)과 반대대는 표현입니다. 희소 표현의 일종인 원-핫 인코딩에서는 벡터의 차원이 곧 단어 집합의 크기이고, 표현하고자 하는 단어의 인덱스의 값만 1이고 나머지는 모두 0인 &lt;code class=&quot;language-text&quot;&gt;ex) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]&lt;/code&gt; 표현 방식이지만, 밀집 표현은 다릅니다.&lt;/p&gt;
+&lt;p&gt;만약 단어 집합의 크기가 10000이라 가정해본다면, 이를 원-핫 인코딩을 통해 희소 벡터(희소 표현을 통해 생성된 벡터)로 표현하게 되면 차원이 10000인 희소 벡터가 생성될 것입니다.&lt;/p&gt;
+&lt;p&gt;하지만 이를 밀집 표현으로 나타내고 사용자가 밀집 표현의 차원을 128로 설정했다면, 밀집 벡터(밀집 표현을 통해 생성된 벡터)의 차원은 128이 되며 벡터 안의 모든 값들은 실수가 됩니다.&lt;/p&gt;
+&lt;p&gt;이와 같이 단어를 &lt;strong&gt;밀집 벡터&lt;/strong&gt;로 표현하는 과정을 &lt;strong&gt;워드 임베딩&lt;/strong&gt;이라고 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;워드-임베딩word-embedding&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%8C%EB%93%9C-%EC%9E%84%EB%B2%A0%EB%94%A9word-embedding&quot; aria-label=&quot;워드 임베딩word embedding permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;워드 임베딩(Word Embedding)&lt;/h2&gt;
+&lt;p&gt;워드 임베딩이란, 단어를 &lt;strong&gt;밀집 벡터(Dense Vector)&lt;/strong&gt;의 형태로 표현하는 방법입니다. 또한 이 워드 임베딩 과정을 거쳐 나온 밀집 벡터의 이름을 &lt;strong&gt;임베딩 벡터(Embedding Vector)&lt;/strong&gt;라고 합니다.&lt;/p&gt;
+&lt;p&gt;아래는 원-핫 벡터와 임베딩 벡터의 차이를 나타낸 표입니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;원-핫 벡터&lt;/th&gt;
+&lt;th&gt;임베딩 벡터&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;차원&lt;/td&gt;
+&lt;td&gt;고차원&lt;/td&gt;
+&lt;td&gt;저차원&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;다른 표현&lt;/td&gt;
+&lt;td&gt;희소 벡터의 일종&lt;/td&gt;
+&lt;td&gt;밀집 벡터의 일종&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;표현 방법&lt;/td&gt;
+&lt;td&gt;수동&lt;/td&gt;
+&lt;td&gt;훈련 데이터로부터 학습&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;값의 타입&lt;/td&gt;
+&lt;td&gt;0, 1&lt;/td&gt;
+&lt;td&gt;real number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content:encoded></item><item><title><![CDATA[자연어 처리(NLP)의 전처리 - 원-핫 인코딩]]></title><description><![CDATA[원-핫 인코딩(One-Hot Encoding) 지난 게시물인 정수 인코딩에서는 Vocabulary…]]></description><link>https://mintyu.github.io/Pytorch04/</link><guid isPermaLink="false">https://mintyu.github.io/Pytorch04/</guid><pubDate>Sun, 25 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;원-핫-인코딩one-hot-encoding&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9one-hot-encoding&quot; aria-label=&quot;원 핫 인코딩one hot encoding permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;원-핫 인코딩(One-Hot Encoding)&lt;/h2&gt;
 &lt;p&gt;지난 게시물인 &lt;a href=&quot;https://mintyu.github.io/Pytorch03/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;정수 인코딩&lt;/a&gt;에서는 Vocabulary의 각 단어에 인덱스를 부여하는 정수 인코딩까지 마쳤습니다. 그리고 이후 원-핫 인코딩과 워드 임베딩을 통해 단어들을 벡터로 바꿔준다고 말미에 언급했었습니다. 이번 게시물은 그 중 &quot;원-핫 인코딩(One-Hot Encoding)&quot;에 대한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&quot;원-핫-인코딩이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;원 핫 인코딩이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;원-핫 인코딩이란?&lt;/h3&gt;
 &lt;p&gt;원-핫 인코딩이란, 단어 집합의 크기를 차원으로 하고 표현하고 싶은 단어의 인덱스에 1의 값을 부여하고, 다른 인덱스에는 0을 부여하는 단어의 벡터 표현 방식입니다. 이렇게 표현된 벡터의 이름이 원-핫 벡터(One-Hot Vector)입니다. 여기서 단어의 인덱스는 앞서 정수 인코딩을 통해 맵핑한 데이터를 기반으로 합니다.&lt;/p&gt;
@@ -120,7 +167,7 @@ token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; okt&lt;span cl
 &lt;h3 id=&quot;원-핫-인코딩의-한계&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%98-%ED%95%9C%EA%B3%84&quot; aria-label=&quot;원 핫 인코딩의 한계 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;원-핫 인코딩의 한계&lt;/h3&gt;
 &lt;p&gt;원-핫 인코딩과 같은 표현 방식은, 단어의 수가 늘어날 수록 벡터의 크기가 점점 커진다는 단점이 있습니다. 단어 집합(Vocabulary)의 크기가 곧 원-핫 벡터의 차수이기 때문에, 단어의 수가 많으면 벡터를 저장하는데 리소스가 많이 필요할 뿐만 아니라 연산에서도 불리합니다.&lt;/p&gt;
 &lt;p&gt;또한, 원-핫 벡터는 단어의 유사도를 표현하지 못합니다. 원-핫 인코딩을 통해서는 &lt;code class=&quot;language-text&quot;&gt;[&amp;#39;오렌지&amp;#39;, &amp;#39;사과&amp;#39;, &amp;#39;개&amp;#39;, &amp;#39;고양이&amp;#39;]&lt;/code&gt; 이와 같은 단어 집합이 있을 때, 원-핫 인코딩을 거치면 &lt;code class=&quot;language-text&quot;&gt;[1, 0, 0, 0]&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;[0, 1, 0, 0]&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;[0, 0, 1, 0]&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;[0, 0, 0, 1]&lt;/code&gt; 의 4개의 벡터로 표현됩니다. 인간은 단어 집합을 보고 오렌지와 사과는 과일이며 개와 고양이는 동물이므로 서로 유사한 특징을 묶어낼 수 있지만, 원-핫 벡터로는 그런 내용들을 포함할 수 없습니다. 인간도 단어 집합을 모르는 상태에서 원-핫 벡터만 봐서는 무엇과 무엇이 서로 유사한지 전혀 알 수 없을 것입니다.&lt;/p&gt;
-&lt;p&gt;따라서 단어 간 유사도까지 표현할 수 있는 워드 임베딩 방식인 Word2Vec을 많이 채택합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[자연어 처리(NLP)의 전처리 - 정수 인코딩, 패딩]]></title><description><![CDATA[정수 인코딩 는 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받아, 인덱스를 순차적으로 리턴해줍니다. 앞선 Vocabulary 게시물에서 만든 단어 집합을 가져와서 정수로 바꿔줍니다. 인덱스…]]></description><link>https://mintyu.github.io/Pytorch03/</link><guid isPermaLink="false">https://mintyu.github.io/Pytorch03/</guid><pubDate>Thu, 15 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;정수-인코딩&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EC%88%98-%EC%9D%B8%EC%BD%94%EB%94%A9&quot; aria-label=&quot;정수 인코딩 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정수 인코딩&lt;/h2&gt;
+&lt;p&gt;따라서 단어 간 유사도까지 표현할 수 있는 워드 임베딩 방식을 많이 채택합니다. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[자연어 처리(NLP)의 전처리 - 정수 인코딩, 패딩]]></title><description><![CDATA[정수 인코딩 는 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받아, 인덱스를 순차적으로 리턴해줍니다. 앞선 Vocabulary 게시물에서 만든 단어 집합을 가져와서 정수로 바꿔줍니다. 인덱스…]]></description><link>https://mintyu.github.io/Pytorch03/</link><guid isPermaLink="false">https://mintyu.github.io/Pytorch03/</guid><pubDate>Thu, 15 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;정수-인코딩&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EC%88%98-%EC%9D%B8%EC%BD%94%EB%94%A9&quot; aria-label=&quot;정수 인코딩 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정수 인코딩&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;enumerate()&lt;/code&gt;는 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받아, 인덱스를 순차적으로 리턴해줍니다. 앞선 &lt;a href=&quot;https://mintyu.github.io/Pytorch02/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Vocabulary&lt;/a&gt; 게시물에서 만든 단어 집합을 가져와서 정수로 바꿔줍니다.&lt;/p&gt;
 &lt;p&gt;인덱스 0과 1은 다른 용도로 사용하기 위해 남겨두고, 나머지 인덱스인 2부터 차례대로 부여합니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;word_to_index &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; word &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vocab&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
@@ -1001,264 +1048,4 @@ cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; 
 
 cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 5&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;위 예제에서 두번째 인자로 입력한 &lt;code class=&quot;language-text&quot;&gt;str.find(&amp;quot;a&amp;quot;)&lt;/code&gt;는 0번째 index의 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;a&amp;quot;&lt;/code&gt;를 찾고 0을 반환할 것입니다.&lt;/p&gt;
-&lt;p&gt;이 값에 1을 더해줘서 첫번째로 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;a&amp;quot;&lt;/code&gt;가 등장한 위치 다음부터 탐색하도록 하여 2번째 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;a&amp;quot;&lt;/code&gt;의 위치를 찾아 5라는 값을 반환하게 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[MAC 필수 어플 - Alfred(Snippet)]]></title><description><![CDATA[Alfred 오늘 소개할 어플은 Alfred입니다.  원래 Paste2를 사용하고 있었는데, 갑자기 구독형으로 정책을 바꾸는바람에 대체 앱을 서칭하다 발견했습니다. (비싸긴 하지만)Paste2보다 훨씬 기능도 강력하고, 무엇보다도 'Snippet…]]></description><link>https://mintyu.github.io/Alfred/</link><guid isPermaLink="false">https://mintyu.github.io/Alfred/</guid><pubDate>Sat, 04 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;alfred&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#alfred&quot; aria-label=&quot;alfred permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Alfred&lt;/h2&gt;
-&lt;p&gt;오늘 소개할 어플은 Alfred입니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 330px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6578c4680852b3156845bf30abcc8e50/d9ecf/1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 91.21621621621621%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD6ElEQVQ4y1WU2W8TVxTG/UwDxGMHL+NZPKttvK/jcewsdshCEwJJQ2lKgaalgBBbUlEo6gsvSJUKr1Uf+qf+emZiqvbh052599yfvu+c0SSyeomcUSFfrJF32mTsDoXyMsHGEaPtY4qdHXKNbfTePlrvFkbvJkZ3D6NzHb0l+40NtNqUQnUV9eoKiRhm1lCtJpliC7e1ytNXb3n15j0vzn4VvSGYbGOV2/itMXZ7JsBd9PZ1tOYmWv0cVqiMyYuRRM6skrMaqE4HxWjw8OnPPDt7x+pshyAI+Pb4mLPTU1qNOv1uO17LtQ5Gc4NCY5NCbV2cTQQWkveHAhRYLopqtbHqE357/zu379yVyx2azSbT6YyXL08Z9AcMgiGdTpf61TKuX6NQn6FW18iLu1wpJOcNSGTttgC7ZJ0e+dKI9x8+8sPJ9/R7fdrtNlubWzx//oJ6tUar1aJRr1MpV/BsG60UkK+uC2yZrB+SdQUYwXJOX+yGXDK6HNx9wsc/PnHr1gF7u3u8fv0Lh4dfoasqvuPiWjZOUWQY6J4YuToV2IiMF5KJgJGzjBvIxohsaUJWhnT/wX3+/OtvTk/PuLF3A1PTsUS2bmBrkUxRAdUskS6tkPEnXJH7V1zpYcYZxA8RMG84aIrFNJjy4vkj0ikFNZeNXUUgS9cpaiq6nsHVbfycfCECz3jLLEVyQxJXBLjkjijIcPTCEk6qw0+je+x0qiQXBGbYWIYmLlWBWFT0Kn1jne38E5q5iTjPoBWrpL0JaeEkluw+aSfEsGt4lsSRyI93tpiZU0oXpuyqz7ipnXGgv+ZIf8dd/QP3tU9sqg9xTV96qWNalTlwTCJt9UnZQdxQ1y3RqJZ5eGOItaRTSgdcK5ywXzjjUH/Lvn7KlvEjgXWNkuPjOZZM2yUnM0h7KxJbgKkIaA0EOmTR7BEOhnw3rZJSFvHdokxUl6hmLMfUsGwVzzMpeR62Vycr041h7iRWQin2UYqD2OUFI6AXTpmFHdJmE6fSw6u08cqNWG65hVPuYcj3l/WXSXmrKO6qRF0hFUnAiWSxFwMVKyAp0JRMKiW9WHQmJKVIkaKUL5f8tXOAt07SW4vPUuIoUlQTgRU5TyhmBOyTlNiLUWxrKOAQxVlmwRhwQT/XF3rARTNkwZQaZxy7Udy5vMncoQCTAkzGDiN9hoVctkK609tsHj1iZe8B3dnXdKZ36G18E/9lLtvL586886ipGDwHLs77mPwvUNb1myfsHj9l+/ZjDh+8ZPzlPdb2TzDb21yyRuIuasvkf2ABStx55M/AWM5IYs7jyrAWikMuiuvofdGOYGOpGcfAf6Hi8h97Ui/v8OwVyQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Alfred4&quot;
-        title=&quot;Alfred4&quot;
-        src=&quot;/static/6578c4680852b3156845bf30abcc8e50/d9ecf/1.png&quot;
-        srcset=&quot;/static/6578c4680852b3156845bf30abcc8e50/12f09/1.png 148w,
-/static/6578c4680852b3156845bf30abcc8e50/e4a3f/1.png 295w,
-/static/6578c4680852b3156845bf30abcc8e50/d9ecf/1.png 330w&quot;
-        sizes=&quot;(max-width: 330px) 100vw, 330px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;원래 Paste2를 사용하고 있었는데, 갑자기 구독형으로 정책을 바꾸는바람에 대체 앱을 서칭하다 발견했습니다.&lt;/p&gt;
-&lt;p&gt;(&lt;del&gt;비싸긴 하지만&lt;/del&gt;)Paste2보다 훨씬 기능도 강력하고, 무엇보다도 &apos;Snippet&apos;기능이 마음에 쏙 들었습니다.&lt;/p&gt;
-&lt;p&gt;기능을 좀 살펴본 후 아무 고민도 없이 갈아탔습니다!&lt;/p&gt;
-&lt;p&gt;Alfred의 Default 단축키는 &lt;code class=&quot;language-text&quot;&gt;⌥ + Space&lt;/code&gt;로 설정되어있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c17de4b18ed6a3b6806a5936aa60ff75/89048/3.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 16.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAYUlEQVQI12NQUlISUFZWdoBieyQ2UVhRUdFez0DfUUNb3VFWRk6AAWigKVBiLxDvIRWrqKjsVVBU2GZiYPJAX9PwnYS0uCGDgoKCKNAWfyD2IxP7KsopBivLqYbJK8qJAgDEbzCihAlSHQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;search&quot;
-        title=&quot;search&quot;
-        src=&quot;/static/c17de4b18ed6a3b6806a5936aa60ff75/fcda8/3.png&quot;
-        srcset=&quot;/static/c17de4b18ed6a3b6806a5936aa60ff75/12f09/3.png 148w,
-/static/c17de4b18ed6a3b6806a5936aa60ff75/e4a3f/3.png 295w,
-/static/c17de4b18ed6a3b6806a5936aa60ff75/fcda8/3.png 590w,
-/static/c17de4b18ed6a3b6806a5936aa60ff75/efc66/3.png 885w,
-/static/c17de4b18ed6a3b6806a5936aa60ff75/c83ae/3.png 1180w,
-/static/c17de4b18ed6a3b6806a5936aa60ff75/89048/3.png 1242w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;눌러보면, 기존 맥의 Spotlight 검색 기능과 매우 비슷한 검색창이 나옵니다.&lt;/p&gt;
-&lt;p&gt;여기에 &lt;code class=&quot;language-text&quot;&gt;alfred&lt;/code&gt;를 검색하고 엔터를 누르면 다음과 같은 preference창을 볼 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c013021aced1f9b651913f4691890eb2/b2c3d/2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACvUlEQVQ4y2WUXU8TQRSGF+KFiUJLhNLIhYI1CLTd2Zm2u9vudj9Ky1JKS4mmtCAa9cJgiXpHvDAk/jb/hXqhromJv4Bl9nhm+yHFiydnZvbNs2dmNivt1NQT07FOTdPqlwwTKY8plox+SYDretHAudnv9g77R0+P+wfdXr/T6fY7B903nYPeu/b+40NJkqalPe0YTM0FTdegUNBAVbGqg6rpJVC1ImiaDnqxBKZZhrJlQ7lsRZgCXLNtR+R/o/C2tL/2/kJNW5cylQNFoVdQAlU3AsupBrZtB7bjBJ7nBZSyQJZJQMgAmZALzEI2m/2CwhnptfOJF4kLKAypwkKF0hCFYUFVQ+wsNAwj3NryQsuyQ5SFjA0zlA2hnLEcoPhbJDxiH7guo1CRUcQAZRG5XD7adqWyCdVqDRzXBcO0geV1IEQZ5xBOhVAeCnvKGQqdsZBgSCDO0TBM2N1tQr2+A9VaDQyrAoSp+FwZ58hQmB0JX5nnXMctZ1FIRkJCgWGH4iJ2Gg1otvaw0ypemhp1RSaZFDbunfJC2o46JIRFMhGUyaALcfO5vAqM5fEYCuMXXoFTisLsUNh88JYXMvagQyJEkx0I8ST0OhwvBzIj4XHxI1ezLmRkOZRlBoJsBj+D9GCcEWNElmk0FnWUG4xRqOTw2VB4qJxdasm9kCxUOU1scTJf5fr9XV5c87iyWOXu6hNupdo8l/R4abnF2SKuL9SirEBJ1AKW2AZ5ofI1Er7QzsFMdIHONiA/1wI20wJzpQVl6gJN1qD26CVsrj4DZ+UIvNXnoN5pQy7WhFy8NaQJhXgblPj2j0jYWj/5zubrvzZmbT8Td/1MrOKn58r++pzmpxdcP3237meWkKTnr9+2/HRMZP6B859Y/2zE7M8ovIVIy0hqkunUlHQzdX19+gbWKSn1f156iCyJn8NfRMiJykawsTMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Preference&quot;
-        title=&quot;Preference&quot;
-        src=&quot;/static/c013021aced1f9b651913f4691890eb2/fcda8/2.png&quot;
-        srcset=&quot;/static/c013021aced1f9b651913f4691890eb2/12f09/2.png 148w,
-/static/c013021aced1f9b651913f4691890eb2/e4a3f/2.png 295w,
-/static/c013021aced1f9b651913f4691890eb2/fcda8/2.png 590w,
-/static/c013021aced1f9b651913f4691890eb2/efc66/2.png 885w,
-/static/c013021aced1f9b651913f4691890eb2/c83ae/2.png 1180w,
-/static/c013021aced1f9b651913f4691890eb2/b2c3d/2.png 2584w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;저는 우선 Appearance부터 설정해줬습니다. 앞서 설명했던 Search Bar의 테마를 설정할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;기본제공되는 테마를 쓰려 했지만 별로 마음에 드는게 없어서 테마를 따로 만들었습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5c28d21af41966f947caf86a05aee94b/b2c3d/4.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD20lEQVQ4y5XU/08bdRzH8QZNNlYK9CulX660fCnSlrW00OOuPWiAIfQLpSstFIYwZAKrrihEdBugy5ZsbNEti9mWqNHEiXFmSlR0xuD8FmMcJhqjWdzUufNLYvxVs9vnXl7pX+APz7zfP1weP9z7crJwNz0TbOceZgNctpVhs2wwmGXyMxDYmgzDZFlW2qUC0jOp9FA2kxmR5mB2IDmQTSZT+wdSg7m+eP+wTCYrkmXYRxD1j6HbnQFricNvjGJXxyS6Y7O4P76A3uRhRAePIPHASYzMnMPMk69h9uk1LKy8j6fOfIhj5z/G6YvXcPDExT8lsESWqJ670+eduru7eUYIaNNCU3FM6IsdFTL7zgujUy8Ik7OrwvTcJSG3+K5wcOUT4ehzm8KpF78XLlz6RXhl/Q/hjY2/71z56l9c/uj2jxKokD0YWCL9dA5x75QYMg+JTYqoOJw6LuaeWBVzj78qzh96XTy2si6eevaKePrsB+LzL30qrl2+Jn6+8YO4+cVP4rdf/kxuffM7vrv69c0tMO6YIm2OCUQ9D4kh0xB8pTFMj57A4qGXsW9yCZHoCDpDUXBMCKEAB45ulaIxkkhhb3oUZ5eOk382r+PmexsFMOk6QLoaxxF2TYhBfRru4jDG4vOYm15GJH0ATi8Dk0EPrVYDZXkZKjQqGPVaWEyV0GvUSPd0khvra7j+9lsFcJxeIklmCmNdj4lJ3350WEfQTu9BZ8c44oPSYcIptPoZeNwe7HQ6wLU0oaetFb3tLDoYGhOxMHnzyDKunnmmAIapLAmZMuiwDeffIUKUdG1vClxbBqHePQiEwmj2cairbYDb4UCI8UtQC7qDDHaxLB4dSJF3FhexOj9bAGPVOUKXD2BncY/okUfg2RGG3RqCtY5FT/8YunoToOl2NDY2ob7ODs7fDNrbJOEu+ByN2M21k8OJJBYikQI4yiwSVpOGVxER8wfJZ6rwQaWzw0l3wtPaBpfLhwanF/Z6B5wN+ZyotdXhvpp60E43iXlpxDy+AjjsWbjLqFLS5xImEiYVJbpyBylRVZFSdQ1RKKtISTlFSpQUKVNTpFxtImqNhRgrrcRmqiYuq13w1zWArq2/sQXupZcRVGXglfehRZGATx6HusSO7YpKyEvNKFVapCgolPndBAmETmeB2WiDjapGLWWDs6oGDnPVr1tgX8PMrTZ7/28uA8u7TRzP2Ht4ZamFv3ebit++Q8srVQYpI69SG3iNzsRrdQZep6vkzSaKNxsp3qjT36YqDH9ROv1nEiiXklnlhqIamUa2VVn1PTVF26Rd9r+qlTLmfw7/AS7LxRqRwi25AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;appearance&quot;
-        title=&quot;appearance&quot;
-        src=&quot;/static/5c28d21af41966f947caf86a05aee94b/fcda8/4.png&quot;
-        srcset=&quot;/static/5c28d21af41966f947caf86a05aee94b/12f09/4.png 148w,
-/static/5c28d21af41966f947caf86a05aee94b/e4a3f/4.png 295w,
-/static/5c28d21af41966f947caf86a05aee94b/fcda8/4.png 590w,
-/static/5c28d21af41966f947caf86a05aee94b/efc66/4.png 885w,
-/static/5c28d21af41966f947caf86a05aee94b/c83ae/4.png 1180w,
-/static/5c28d21af41966f947caf86a05aee94b/b2c3d/4.png 2584w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;테마를 만드는 과정이 굉장히 쉽고 간단하기 때문에 마음에 들지 않는다면 본인의 입맛에 맞는 테마를 만들어 쓰면 됩니다.&lt;/p&gt;
-&lt;p&gt;이제 Snippet 기능을 본격적으로 사용해봅시다!&lt;/p&gt;
-&lt;h3 id=&quot;snippets&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#snippets&quot; aria-label=&quot;snippets permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Snippets&lt;/h3&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 300px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f15c144cf3509eef1d50a2862f5b208e/5a46d/5.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 24.324324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABQUlEQVQY02MwLTn7P7z99H/9nH3/GYLP/ZfPvvpfNPXyf4GkS//ZYy78Z4uGYBCfOfL8f4aI8/8ZI1BpFPz62fX/P7+8/r9+18n/DD4n/vt23vtfuODJ/+TpD//nzH38P3XGo/958x7/L1389L9j4+3/DEFn/zNFohrKiGz4gxt3/+9ue/Z/cdnl/5zhp/8Lplz5LwZ0oUjK5f9qBdf+S2de+S+eBuGDMMi1DOFAjaHnIHTYOTgbbOiz2zf/Lw0/9L/fe8N/4ehD/5Xzb/43q7jx36Lq5n/Dshv/jYDYvPLmf6n0K/9FgQaaAdmW1bfA2Lrm1n/j8htgtlDyJaDhQAPzOjb8d8va8l8ndvt/loiT//kSQS65BA5L1bxr/6UyIC4WB2K+hEv/BRIv/ZcGiqkA5UAWyAJ9oAH0CSi8Qa4EAAWV8ZqvsBcCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;snippets&quot;
-        title=&quot;snippets&quot;
-        src=&quot;/static/f15c144cf3509eef1d50a2862f5b208e/5a46d/5.png&quot;
-        srcset=&quot;/static/f15c144cf3509eef1d50a2862f5b208e/12f09/5.png 148w,
-/static/f15c144cf3509eef1d50a2862f5b208e/e4a3f/5.png 295w,
-/static/f15c144cf3509eef1d50a2862f5b208e/5a46d/5.png 300w&quot;
-        sizes=&quot;(max-width: 300px) 100vw, 300px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Features 탭에서 Snippets라는 기능을 설정해 줄 수 있습니다.&lt;/p&gt;
-&lt;p&gt;흔히 말하는 자동 완성 기능이라고 생각하면 쉽습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ffd50bc057e33b3abdd8dac9844b0fc6/b2c3d/6_1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADGklEQVQ4y4WTbW/aVhTHHfKma+O0gbWaRHgMBDA2fsTGjglNSkgCDlAgLYGsSdYqqjJX26S2SzVp+3T7FltebPOkSfsEde89PZf0SWqkvvjpnPv0v+f8r8152/aZ7TrP6usNf82t+yyKsuzLmurbtus7a/UPrDc2/Mnk0D/89sg/wDg+mDC+Hx9Mf+zfH045jotwU/cHaElj6OiHsCWMQbndgkeD72DU2wfDtEBRdVA1HSqyCqJUAd2oIsZsjsHWjarJ8v9QcIG7t3z0+tj9+c1I9UM7uh/K1zph9+6D0NvuhnrVCnXDDFXNCGVFDRVVC1E0lFQrNC0nNM1aaFn265rtgFRR/kBBnjupvyIt6xl4yilduzOiOt+lYr5Ka2s16jZadLO5TTc2NjG/R3XToZpu0Drmvf6Adnt9utv2yM5uB6pm7WImOKmck/vrP8HAOqMbiQloC3ugFG3QsC233gBvrweetwfN9gjcuztgog2sou2dNjAh9JagGLZsXArul5+T081zOG2/on31KeyWTsCtNkHVdSiL8sw7bA8U5TIy0AaQFQ39M1hlxLRsNr4UPHZ+IyPxBIbaKXW/eQja4h50GgOsygPbcUGSZDTdgmJRgHzZhKJQAUEQgYmIuFYSRFIslaFQFC5uXL/OcztxnwxLE/CER9RaGkLlq13o1Iew1WwB+gWiWIHsSh6SqQwkGMn0jOS7PL6cJMuJFKzkVi9isRjPtZM+mTZeQg8fhflnLHZByGqwnExCPJ6cHcpkcx9E3vPJmLCYyxcuoktLPDe1fiED6QV0Sk/YK4MVHUAxrWA1qdmBdCZ7peAnfBSMouBEPn+zmRnTtnBMnNsjYt7qk0JKIfFEgiQSabaZoCC2lSYoehUhuwxb/jMWi/LcUfVXeOj40Ck/BufrB2DdGoKYq0KusAqZTI5tZLdDKp3FaleuhHWwWij9vcjzPNctnf1Vu9P7V765FciLrUBaaAaqUAtqjh2Uy1KAf0CALxnggaBQ/Byc/wfX/8cX/x0/mxsIl0FyX2J+fj4XiUQ+g83Pzc3lcU8cx5G39DWFwMAfEOIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;6 1&quot;
-        title=&quot;6 1&quot;
-        src=&quot;/static/ffd50bc057e33b3abdd8dac9844b0fc6/fcda8/6_1.png&quot;
-        srcset=&quot;/static/ffd50bc057e33b3abdd8dac9844b0fc6/12f09/6_1.png 148w,
-/static/ffd50bc057e33b3abdd8dac9844b0fc6/e4a3f/6_1.png 295w,
-/static/ffd50bc057e33b3abdd8dac9844b0fc6/fcda8/6_1.png 590w,
-/static/ffd50bc057e33b3abdd8dac9844b0fc6/efc66/6_1.png 885w,
-/static/ffd50bc057e33b3abdd8dac9844b0fc6/c83ae/6_1.png 1180w,
-/static/ffd50bc057e33b3abdd8dac9844b0fc6/b2c3d/6_1.png 2584w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;설정 창은 위와 같이 생겼으며, 우측 상단의 &quot;Automatically expand snippets by keyword&quot;를 체크하게 되면 따로 동작을 추가로 입력하지 않아도 자동으로 keyword를 인식하고 자동으로 입력해줍니다.&lt;/p&gt;
-&lt;p&gt;예시로 몇 개를 만들어두었는데, 사용법은 굉장히 간단합니다.&lt;/p&gt;
-&lt;p&gt;좌측은 Collection입니다. 같은 기능을 하는 Snippet들을 묶어서 정리할 수 있으며, 공통된 prefix를 지정해줄 수 있습니다.&lt;/p&gt;
-&lt;p&gt;저는 C++ 관련 Snippet의 prefix를 &lt;code class=&quot;language-text&quot;&gt;#&lt;/code&gt;으로 설정해 두었습니다.&lt;/p&gt;
-&lt;p&gt;이 Snippet들 중 CPP initial이라는 항목은 어떻게 설정되어있는지 보도록 하겠습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c00fc899db1433e89d7a89ccb7c4376c/b2c3d/7.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADE0lEQVQ4y4WT72/TRhjHrVR9tYSpa5m0xIntxHHsJP5tx/HFSUNSQmja0hJK23QqRdOmlRkxJBAgtO2v23/B+mLgSZP4CzB3z+7cMmlaJV589Dx3z933nh86bmOKHqEIPe4P1uNoMIi7YS/uBCG1KA5RFCPUi3vRhY36g/jwcBEff3sSHx4dxwfUp/Ynys+7e/NjjuNy3CJ6AhPjAGbOCfSNKfiBD/1oAJ0gANd1wXE9sB0PXK9D8QEhBGEYQhB0sphlO+D5HXrG/ZsK5rkx/+DDaf/Fx33rSWoVh6nrO+ne7l46n8/Tne3tdGd3no4nW+lo41Y6Gm+kw+EwDcNuargotV0/DbroA60GdMN6QwUL3MP+KzwJYtgyfiS+OCaG1SYoRCSKIuJ5HrEti7iuk6HrOmm320TTNKJqLXJzMiWzrR08vT0Dv9M9zwQXxku8t/4U5v5j0lOm0NAUsG0b6CUol8tQLBahWCpRWwKe5zNKJR5EQYAbozH0ogH2/ICW7l4I7ree4R9GL+Bs8xcyNLdBVmqgKAqIopgJViqV/8H2WZz1lg4R0+Ex/0LwFP2G77VP4Z51RjxxDIpap5eELBN28SpYTJIkWgkbmo+ZcFs3LwSnpRjPtSPYVh8Si78BDVWBarWWZSLQsq6CxViGFUGk7SjjEl+Baq1+fv36WoHbrMR4sf4c7hhnRP8mAlWvg2maWR8ZlmVlOI4DhmH8u99sNkGU6MOChAWxCnK9cb6yslLgjoPX+K7+DGbq9ySszMCu9UCpNemBOshyPbN12lPms8x1KmqaFqiqBoIoQZkKUtFM8CsmuDBffhxJh2SzeYrR2j7uXLuLG4KFi2Ue82UBlysSpplc+iIrL+PTmpJSH2qy8sfq6mqBe+D/CgcohlnrO0Br9yFYmUNb9kFuKCBVZXaQvQ6sLFbiVbB4Q22+zefzBW5He/Rn9+s7f5lf3kzMa5NEz28kdrObdFGYtFp6Qn9AojXbidLQkoZ6Je/oF3xvWvbvdMpfUDiJIn+OpaUlOZfL/YelS0vjdUppeXk59w8J1Xz15AVeWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;7&quot;
-        title=&quot;7&quot;
-        src=&quot;/static/c00fc899db1433e89d7a89ccb7c4376c/fcda8/7.png&quot;
-        srcset=&quot;/static/c00fc899db1433e89d7a89ccb7c4376c/12f09/7.png 148w,
-/static/c00fc899db1433e89d7a89ccb7c4376c/e4a3f/7.png 295w,
-/static/c00fc899db1433e89d7a89ccb7c4376c/fcda8/7.png 590w,
-/static/c00fc899db1433e89d7a89ccb7c4376c/efc66/7.png 885w,
-/static/c00fc899db1433e89d7a89ccb7c4376c/c83ae/7.png 1180w,
-/static/c00fc899db1433e89d7a89ccb7c4376c/b2c3d/7.png 2584w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;name에는 그 Snippet의 기능을 설명해주는 이름이면 충분하고, keyword는 Collection에서 지정해주었던 prifix와 함께 쓰여서 동작하게되므로 본인이 편한 약어를 지정해주면 됩니다.&lt;/p&gt;
-&lt;p&gt;예를 들어, CPP initial이라는 이름의 Snippet은 Collection의 prifix가 &lt;code class=&quot;language-text&quot;&gt;#&lt;/code&gt;이고 keyword가 &lt;code class=&quot;language-text&quot;&gt;init&lt;/code&gt;이므로, &lt;code class=&quot;language-text&quot;&gt;#init&lt;/code&gt;을 입력하게 되면 다음과 같이 설정해둔 내용으로 바로 변환되어 입력됩니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	
-	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이를 통해 반복적인 작업을 최대한 줄여줄 수 있습니다.&lt;/p&gt;
-&lt;p&gt;Snippet 설정창의 왼쪽 아래부분 Curly bracket(&lt;code class=&quot;language-text&quot;&gt;{ }&lt;/code&gt;)을 통해 Placeholder를 설정해줄 수도 있습니다.&lt;/p&gt;
-&lt;p&gt;Placeholder를 통해 출력할 수 있는 기능은 아래와 같습니다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;오늘 날짜 출력&lt;/li&gt;
-&lt;li&gt;다른 날짜 출력&lt;/li&gt;
-&lt;li&gt;클립보드 히스토리&lt;/li&gt;
-&lt;li&gt;랜덤 출력&lt;/li&gt;
-&lt;li&gt;Snippet 실행 후 최종 커서 위치 설청&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;이를 이용하면 그 때마다 상황에 맞는 데이터를 출력해줄 수 있습니다.&lt;/p&gt;
-&lt;p&gt;Placeholder의 사용법에 대한 더 자세한 설명은 다음 링크에서 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.alfredapp.com/help/workflows/advanced/placeholders/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.alfredapp.com/help/workflows/advanced/placeholders/&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;이 값에 1을 더해줘서 첫번째로 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;a&amp;quot;&lt;/code&gt;가 등장한 위치 다음부터 탐색하도록 하여 2번째 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;a&amp;quot;&lt;/code&gt;의 위치를 찾아 5라는 값을 반환하게 됩니다.&lt;/p&gt;</content:encoded></item></channel></rss>
