@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Jun 2021 09:19:09 GMT</lastBuildDate><item><title><![CDATA[자연어 처리(NLP) 실습 - LSTM]]></title><description><![CDATA[LSTM(Long Short Term Memory) 실습 Kaggle의 영화 리뷰에 대한 감정 예측 데이터셋에 대해 LSTM으로 자연어차리 실습을 해보도록 하겠습니다. Kaggle 링크를 통해 실습 데이터셋을 받을 수 있습니다. Data…]]></description><link>https://mintyu.github.io/LSTM/</link><guid isPermaLink="false">https://mintyu.github.io/LSTM/</guid><pubDate>Mon, 07 Jun 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;lstmlong-short-term-memory-실습&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#lstmlong-short-term-memory-%EC%8B%A4%EC%8A%B5&quot; aria-label=&quot;lstmlong short term memory 실습 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LSTM(Long Short Term Memory) 실습&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Mar 2022 11:28:57 GMT</lastBuildDate><item><title><![CDATA[카카오톡 봇 제작기 (1) - 구동 원리, 준비물]]></title><description><![CDATA[카카오톡 봇 게임 캐릭터 정보를 확인하기 위해 따로 인터넷 검색을 해야 하는 번거로운 작업을 줄이고, 간단한 편의성 기능을 제공하기 위해 개인적으로 사용할 목적의 카카오톡 봇을 만들어보기로 결심했습니다. 봇 최초 컴파일(3월 7일) 이후…]]></description><link>https://mintyu.github.io/KakaoBot_1/</link><guid isPermaLink="false">https://mintyu.github.io/KakaoBot_1/</guid><pubDate>Tue, 22 Mar 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;카카오톡-봇&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EB%B4%87&quot; aria-label=&quot;카카오톡 봇 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;카카오톡 봇&lt;/h2&gt;
+&lt;p&gt;게임 캐릭터 정보를 확인하기 위해 따로 인터넷 검색을 해야 하는 번거로운 작업을 줄이고, 간단한 편의성 기능을 제공하기 위해 개인적으로 사용할 목적의 카카오톡 봇을 만들어보기로 결심했습니다.&lt;/p&gt;
+&lt;p&gt;봇 최초 컴파일(3월 7일) 이후 2주가 지난 지금, 어느정도 봇도 안정화되었고 개발 과정에 대해 궁금해하시는 분들이 있어서 개발 과정을 간단하게 공개해보려 합니다.&lt;/p&gt;
+&lt;h3 id=&quot;작동-원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;작동 원리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;작동 원리&lt;/h3&gt;
+&lt;p&gt;지금까지 카카오톡 단체 채팅방이나 오픈 톡방에서 방장봇을 제외한 사설 봇을 보았다면, 아마 99.9% 모두 같은 원리로 동작하는 봇들입니다.&lt;/p&gt;
+&lt;p&gt;한 때 카카오톡의 통신 프로토콜인 &lt;code class=&quot;language-text&quot;&gt;LOCO Protocol&lt;/code&gt;(2011년 10월 13일 릴리즈, 기존 HTTP/TCP 프로토콜에서 자체 개발한 LOCO 프로토콜로 변경)을 통해 카카오톡 클라이언트인 척 메시지를 보내는 봇들도 있었으나, 해당 부분은 보안에 취약하기도 하고 약관에 위배되기 때문에 해당 방법을 이용한 봇들을 사용하면 계정이 정지당할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;이 때문에 현재 카카오톡 봇 앱을 통해 구동되는 봇들이 대부분이라고 볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;봇 구동을 위해 많이 사용하는 앱은 &lt;code class=&quot;language-text&quot;&gt;메신저봇 R&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;채팅 자동응답 봇&lt;/code&gt;입니다. 제가 사용한 앱은 &lt;code class=&quot;language-text&quot;&gt;메신저봇 R&lt;/code&gt;이며, 앞으로의 설명들은 모두 해당 앱을 기준으로 진행됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://play-lh.googleusercontent.com/I5QjPGUfiYmHcMqmKdIPj7AOIIADGsMcSV_eibFPUxjPUDq1R_7cDycJ7kevpi862w=s360-rw&quot; alt=&quot;메신저봇 R&quot;&gt;&lt;/p&gt;
+&lt;p&gt;해당 앱의 작동 원리는 아래와 같습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;NotificationListenerService&lt;/code&gt;를 통해 알림을 파싱한다.&lt;/li&gt;
+&lt;li&gt;Rhino JavaScript Engine을 사용하여 사용자가 작성한 자바스크립트로 알림 정보를 전달하여 처리한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;WearableExtender&lt;/code&gt;를 통해 답장을 전달한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1번에서 받게 되는 알림의 내용에는 채팅이 온 방의 이름, 메시지 내용, 전송자의 이름 등의 정보가 있습니다.&lt;/p&gt;
+&lt;p&gt;해당 정보들을 받으면 2번 과정에서 사용자가 작성한 자바스크립트의 내용에 따라 정보를 처리하게 됩니다. (인터넷에서 해당 정보를 찾아온다던가, 결과값을 더 예쁘게 보일 수 있도록 처리)&lt;/p&gt;
+&lt;p&gt;그리고 해당 결과를 다시 채팅방에 reply 해주면서 챗봇이 동작하게 됩니다.&lt;/p&gt;
+&lt;h3 id=&quot;준비물&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A4%80%EB%B9%84%EB%AC%BC&quot; aria-label=&quot;준비물 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;준비물&lt;/h3&gt;
+&lt;p&gt;애석하게도, 현재 카카오톡의 정책 때문에 준비할것이 조금 있습니다.&lt;/p&gt;
+&lt;p&gt;저는 공기계(갤럭시 S9+ 기기)를 통해 봇을 동작시킬것이기 때문에, 하나의 본계정을 두개의 기기에 모두 로그인해서 사용할 수 없는 카카오톡의 정책 상 부계정을 하나 새로 만들었습니다.&lt;/p&gt;
+&lt;p&gt;(공기계가 아닌 본인의 기기로 본계정을 통해 봇을 구동할 경우, 사용자의 도배나 악용으로 인해 제재를 받는 경우 대처하기가 어려워집니다.)&lt;/p&gt;
+&lt;p&gt;부계정을 만드는 방법에는 크게 두 가지 정도가 있습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;통신사의 투넘버 서비스(번호 두개 이용)를 통해 계정을 하나 더 생성한다.&lt;/li&gt;
+&lt;li&gt;가상 해외 번호를 통해 계정을 하나 더 생성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;두 방법은 장단점이 있습니다. 1번 방식은 통신사에 추가 비용을 지불해야 한다는 단점이 있으며, 카카오톡 임시조치 제한을 받지 않는다는 장점이 있습니다(계정 바로 이용 가능)
+하지만, 2번 방식은 앱을 통해 가상 해외 번호를 받아서 카카오톡 인증만 진행하면 되기 때문에 추가 비용이 들지 않는다는 장점이 있습니다. 하지만, 카카오톡의 정책으로 인한 임시조치 제한을 받습니다.&lt;/p&gt;
+&lt;p&gt;여기서 임시조치 제한이란?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1) 짧은 기간 다수의 사용자가 카카오톡 친구로 추가되는 경우
+
+2) 서비스 악용 유저가 활동한 서비스 환경과 유사한 환경에서 서비스를 사용한 경우
+
+3) 불법 사행성 사이트 홍보 및 음란물 발송 이력이 있는 서비스 이용 환경에서 카카오톡을 사용한 경우
+
+4) 짧은 기간 동안 채팅방 및 오픈 채팅방을 다수 개설한 경우
+
+5) 오픈 채팅방 참여 속도 및 빈도가 비정상적으로 많을 경우
+
+6) 통신사 확인이 되지 않는 해외 가상번호를 사용하는 경우
+
+7) 메시지 신고 접수가 많이 된 경우
+
+8) 오픈 채팅방 사용자 신고 접수가 증가할 경우
+
+9) PC 에뮬레이터 등 비정상적인 환경에서 카카오톡을 사용할 경우 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;해당 사례 중 한 가지, 혹은 두 가지 이상 해당되었을 때 적용되는 보호조치로, 오픈채팅을 이용하지 못하며 친구추가 수에 제한이 걸리게 됩니다.&lt;/p&gt;
+&lt;p&gt;물론 임시로 적용되는 제한이기 때문에 일정 기간 정상적으로 카카오톡을 이용하는 것이 카카오톡 내부 매커니즘(봇에 의해 자동으로 이루어지는 것으로 추정)에 의해 확인이 된다면 해제되긴 합니다만, 언제 풀릴지는 정확히 알 수 없습니다.&lt;/p&gt;
+&lt;p&gt;가상 해외 번호를 통해 인증한 경우 거의 무조건 임시조치 제한에 걸리게 되니 참고해주세요.(6번 내용에 해당)&lt;/p&gt;
+&lt;p&gt;저는 급한 프로젝트가 아니었으므로 해외 번호로 가입 후 제한이 풀리기를 기다렸습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[자연어 처리(NLP) 실습 - LSTM]]></title><description><![CDATA[LSTM(Long Short Term Memory) 실습 Kaggle의 영화 리뷰에 대한 감정 예측 데이터셋에 대해 LSTM으로 자연어차리 실습을 해보도록 하겠습니다. Kaggle 링크를 통해 실습 데이터셋을 받을 수 있습니다. Data…]]></description><link>https://mintyu.github.io/LSTM/</link><guid isPermaLink="false">https://mintyu.github.io/LSTM/</guid><pubDate>Mon, 07 Jun 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;lstmlong-short-term-memory-실습&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#lstmlong-short-term-memory-%EC%8B%A4%EC%8A%B5&quot; aria-label=&quot;lstmlong short term memory 실습 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LSTM(Long Short Term Memory) 실습&lt;/h2&gt;
 &lt;p&gt;Kaggle의 영화 리뷰에 대한 감정 예측 데이터셋에 대해 LSTM으로 자연어차리 실습을 해보도록 하겠습니다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/c/movie-review-sentiment-analysis-kernels-only/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Kaggle 링크&lt;/a&gt;를 통해 실습 데이터셋을 받을 수 있습니다.&lt;/p&gt;
 &lt;p&gt;Data 탭에서 &lt;code class=&quot;language-text&quot;&gt;train.tsv.zip&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test.tsv.zip&lt;/code&gt; 을 내려받아 압축을 풀면 각각 train set과 test set의 tsv 파일을 얻을 수 있습니다.&lt;/p&gt;
@@ -1123,71 +1173,4 @@ nltk&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;download&lt;sp
 
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;위 코드와 같이 &lt;strong&gt;소의 위치가 처음 초기화되는 경우&lt;/strong&gt;와 &lt;strong&gt;소의 위치가 그대로인 경우&lt;/strong&gt;만 체크해주더라도 쉽게 풀 수 있는 문제였습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[VSCode 괄호, 따옴표 Tab으로 나가기 [VSCode]]]></title><description><![CDATA[VSCode 괄호 Tab키로 나가기 VSCode…]]></description><link>https://mintyu.github.io/TabOut/</link><guid isPermaLink="false">https://mintyu.github.io/TabOut/</guid><pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-괄호-tab키로-나가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-%EA%B4%84%ED%98%B8-tab%ED%82%A4%EB%A1%9C-%EB%82%98%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;vscode 괄호 tab키로 나가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VSCode 괄호 Tab키로 나가기&lt;/h2&gt;
-&lt;p&gt;VSCode에는 기본적으로 괄호를 한 쪽&lt;code class=&quot;language-text&quot;&gt;&amp;quot; ( &amp;quot;&lt;/code&gt; 입력하면 나머지 한 쪽도 자동 완성되어 &lt;code class=&quot;language-text&quot;&gt;&amp;quot; ( ) &amp;quot;&lt;/code&gt;이렇게 입력됩니다.&lt;/p&gt;
-&lt;p&gt;이 자동완성 기능을 끄는 방법도 있겠지만, 어차피 괄호를 열었다면 닫는 버튼을 한번 더 입력해야하는 것은 마찬가지입니다.&lt;/p&gt;
-&lt;p&gt;다른 IDE나 Editor에서는 &lt;code class=&quot;language-text&quot;&gt;Tab&lt;/code&gt;버튼을 통해 괄호나 따옴표 밖으로 나가는 것을 지원하는것 같았는데 VSCode 자체에서는 그 기능을 찾을 수가 없었습니다.&lt;/p&gt;
-&lt;p&gt;그래서 더 쉽게 괄호를 탈출하는 방법은 없을까 해서 찾던 중, &lt;a href=&quot;https://github.com/microsoft/vscode/issues/22864&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;깃허브&lt;/a&gt;에서 그 해결 방법을 찾을 수 있었습니다.&lt;/p&gt;
-&lt;p&gt;바로 &lt;strong&gt;&quot;TabOut&quot;&lt;/strong&gt;이라는 Extension입니다.&lt;/p&gt;
-&lt;h3 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h3&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 98px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/392ab77b05043e1e62c66e6ca54f60ea/a4837/1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 536.734693877551%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAABrCAYAAAB3/aIZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAIL0lEQVRo3u1ZW28bRRTOMxJSBQKSNkkTx07s3Y3vdhzn5tyvTRwnTps0TdKSUkrpjZa26kUNTdP0Ci0oqEUFAaLiBfECEjwBEgWKoEWIB37O4XxTj7Pe7NobN0IC9WG03tnZb8+cc+b75oxLQrEE1bgDVKdFqFYNi2sxTb5b8sFH98TNRoC5lBCVPPzzb76Jbgig0xOgkh9/fmg5XauPGPtXAYNU8tODP/IOkr/lvbs+avo8L6B+gKPOn+1H8CprtDWgeQFxlS8EGxK0fO09un7zNl26+i59fO8LOn5qgTZXeUytt7QQ0dr0QiV1D4zR4uWbmcEhOr94jX64/xsdY9DqWt8aS00B0RmJd9Ls/Ou0uPwOnTyzSFvYIkx1anYf3Vy5S1998x0Fo21i7BrA+w8eZTs93gYqr1aEJW+evkDnLlyl0+eXRZ/iiwl/llXW0UW2urG1N+tfSwsBWOFQxQu+cAu1dgzS2YXLog+AaHDHlbdXKNbSYx/wAk+1uX2ABkZ20Ame8vOl1eJl+K2s0k1LV26tz0L4rqmtj3oGx4TP2ntGqG/bBHX1jfI1TbfvfkbRpq41HGAJ+NbSDerklzE9pMkC399a+ZA+/fxL9u912n/wRDYgBQERAORca+cQlVbUivbMpjLqYCvPsD+ffa6cqlxeizwMmFmo0YEjp2jlziciOFfefp+W+AN3mJXm9x8VYKq/0XSlCLYxWyl40JToo5aOARGcFo42goD+QgRhSQ7VmajKpl/TVmC4ltz/5ZGp+YW4z6qV/Pr7X09M/zmAX3/7/cYCwvEyQTcEsJmjuRGqtwrY3r/BFv7bgHaVzxagUaxky5ezloByMJ5BrHqH0jQwvJ3amDT0hGAENQXUg8V5DY9tnxMMHW7sELy4LbXTEjSvhaB8gIGFsJ4xdYgVQNu6tuWs74KA6AMr42W8KCUTjBNgxRtMTpq+ZwkIa0KxdhoancpqMBrA8aF+9qfRQsE2+XwIUPirKdEviFVaOrZjt/BnjYkMrAHUOxptdGKW0lMvCwXsGRwXYC3tAznLdfWdUC6gHgx9yfSM0GaQLXYTYG3Qv9n4rKaYTRn3g8kd1NU/Kvwn+9CkDFhu54yA+A3FQxJLsHVtOM18qAXieVdDviVq6kNMyy6YLQvtCpItwCerAp4C/ncA81VVRechriAFY+lQ1EqRV9A8eE+//c23ACynjAeg/l7mv5Gx6SwoxpnJqC3AFIsTSALyiR0sgLr6U6JcW7eFIAcUPtNz+5mpH9MYqgKAYfMOy812tKY+lNUoNATTxnQrWDo7epPCpwlutgGNrA1lAyDuQf0zew7QEMun8YzCtoX9bCEEChqcHN8lKiqMtR0UPcEiIHPzB2mcVU6AaGHT6sl2lLEFQWAQCOgyxpidN9gGHGaBR0SHOQ/NCsV1awo2Sn2cg3GuSgstP/trmfPPzobeNttY+ewpYz8FLFCn2BEq23kozx/slmm2LJRbYP3Odd3kINczwKZmXxUbdnmYVhR9yYf+SCtt4zoFm/XxyT3iyMWRsRbL0jbBSgsl4FZnvbB2kC2FrHpDzTkHabYkAH1g7RGmfrlFRh80JsW1C6pS0wNJsynj6/AZChxUobIaQD8+As2GRpuezhkthHX4ejK9S6ieLM3QDxBIA2pAW1OW8gk/ze09JMR972vHBFBcnCeOZ7cktlUPbYKlEweS6Id0ot6TQGblRkELEdlRrvNQeE/snKceVr6iVE/6EKUZFA/FY6J7WASn6LUs08ORKRYdhk1nUTK63mO+/wtjw1/id1j8Fk2DDzN99gDDq0A4Nc4AOUEWDORGFuiBs78tgxIRYABy8HWL1iDAfCpv7/jFrVqUyrmvNgMuP5zXQgwEUFwN0GHVRefUGjqlOOi0UkNn+fe0qpCLx1YxuCcDag3IDyp44Lzqpouqg4bVemGdOzP9mBagffxsWa2mZtVPlRLUDNDDHZjOYbWW3mDLMBjgLp0rHHwtVaMUVfx0Q62iNgaFG9xGQBcDVjDYJE/npOqkl7QYueFLg8YovLa90BZfnAJKgK4qVaSym1xqJBew2h0kLz+4xFORLzt15zQYCPoCseIsLD0xQ40DEzTu8dAhtU743CMBW9v7qNQdpt2aQrNsYZkSJW+gUZwkoeEkDhUBKgG5NYa+gI2QAQscMPgZrnEBsIUBy90hOqM5KcY+cfGUMBiChMIHDA1QkCuuOD9EEJKpKeHzfWxhSlWFy2pxVBXnKStuP53VXOILUDps2KEjeBmVE+gM7I0KqoGtxH2KJaKcA5RUNRH5cgnYyFznd3tFjlUoYQpwKQHrJCAO05pZU3APbkSJBuBwLEGVPL5b9dIhBVmhAwxkAXlVBJtoctcr1M06gpdxvIfiB1LQyfc44IVPa5WgSO4uI2DOlDmiEPE07xIQ1YbmbiEHaJBTqB98ijF1PBZ+WzNlBKUiE5Sox0dquFVMGVbgDy/UymiYPvpQPMLPdezvx0Fx05g+KDJt9nDaTHvqyBlJUGp8WlgL+sdUZdGIPuwkAIgA1vCUF3iJ+vVpIxPbx4m9pHBis0hB3Ec5ipgqVA8NvyFayEe1PkKb1QZKs2VYqjmJrV96OzmxjytOepGXXj0nLxqkFA3JrHFTOAcrean5tRBd46Wn8dVpXHqSHAB6lL94hFs5RxzNmWET4QJOkzIeE9GCdJ3BEqrPnByEiGfoCywDRy+ybwaZvurZAikFUQYCtV3mNd9WiL6MBNvCLxzNEOzJDMHi94z6+N9vWwSrl4BqfgHAiJ5fDQpLq4qRANsipZmL1D8Y3nV1gqCAIAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;1&quot;
-        title=&quot;1&quot;
-        src=&quot;/static/392ab77b05043e1e62c66e6ca54f60ea/a4837/1.png&quot;
-        srcset=&quot;/static/392ab77b05043e1e62c66e6ca54f60ea/a4837/1.png 98w&quot;
-        sizes=&quot;(max-width: 98px) 100vw, 98px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;좌측 메뉴에서 Extension 탭을 선택한 후, 마켓플레이스에서 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;TabOut&amp;quot;&lt;/code&gt;을 검색한 후 설치해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/715d156a8f8454814249c75c644d9dd2/7161f/2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 27.027027027027025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABK0lEQVQY0zWQ207CUBRE+y8KQmlLr7SlFPBUKAIBBCHRBDWGxPBqglJREr98eVrwYSV7z8NkZpSLikVJdanoPmo9IP91OyLqpgRxD9ONqUvsRgdD6iXVoVzzuJSUzpRr7ll3UR7XG76Pv7xu3nh62fCR/dAWQ5YPz8xXa/rDOWHcp9lJiSQ1M0TVXSzTRjcciU3F8IsQV5qHstsfOXxlbLdbEiHIsoxkMMNvJdKoh+hPcMNrDCeiJVO7zQRNM+l4GoFTJ7DrqGYTP0pkywbK++4gTfYsFvcIkbDbfdLtTRDpjFiMijtPF4vbYgLNakqDkKoZUdblROqp8mXVPlX2oxtG0xVJOiUdL2TFu2Kz/nhJ2B7gx2nx5/vle5peGzfo4snUuhUWJnnVf/4AQAqtrwZdgK4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;2&quot;
-        title=&quot;2&quot;
-        src=&quot;/static/715d156a8f8454814249c75c644d9dd2/fcda8/2.png&quot;
-        srcset=&quot;/static/715d156a8f8454814249c75c644d9dd2/12f09/2.png 148w,
-/static/715d156a8f8454814249c75c644d9dd2/e4a3f/2.png 295w,
-/static/715d156a8f8454814249c75c644d9dd2/fcda8/2.png 590w,
-/static/715d156a8f8454814249c75c644d9dd2/efc66/2.png 885w,
-/static/715d156a8f8454814249c75c644d9dd2/c83ae/2.png 1180w,
-/static/715d156a8f8454814249c75c644d9dd2/7161f/2.png 1182w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;설치가 완료되었다면 탭을 통해 쌍(Pair)이 있는 괄호나 따옴표의 한 단계 밖으로 나갈 수 있습니다.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;위 코드와 같이 &lt;strong&gt;소의 위치가 처음 초기화되는 경우&lt;/strong&gt;와 &lt;strong&gt;소의 위치가 그대로인 경우&lt;/strong&gt;만 체크해주더라도 쉽게 풀 수 있는 문제였습니다.&lt;/p&gt;</content:encoded></item></channel></rss>
