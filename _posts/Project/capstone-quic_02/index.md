@@ -9,8 +9,10 @@ keywords:
   - udp
   - quic
   - file transfer
+  - protocol
   - 네트워크
   - 파일 전송
+  - 프로토콜
 ---
 
 ## 4. QUIC 소개

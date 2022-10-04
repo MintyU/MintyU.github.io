@@ -9,8 +9,10 @@ keywords:
   - udp
   - quic
   - file transfer
+  - protocol
   - 네트워크
   - 파일 전송
+  - 프로토콜
 ---
 
 ## 0. 전송 계층 프로토콜의 간단한 이해
