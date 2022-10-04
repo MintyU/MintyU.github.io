@@ -1,4 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Oct 2022 09:13:09 GMT</lastBuildDate><item><title><![CDATA[TCP와 QUIC 파일 전송 성능 비교 (2)]]></title><description><![CDATA[4. QUIC 소개 앞선 글에서 설명했듯, QUIC은 UDP를 기반으로 만들어진 전송 계층 프로토콜입니다. 하지만, 기존에 TCP를 필요로 하던 HTTP에서 TCP의 자리를 UDP 기반의 QUIC 프로토콜이 차지했다는 사실은, UDP…]]></description><link>https://mintyu.github.io/capstone-quic_02/</link><guid isPermaLink="false">https://mintyu.github.io/capstone-quic_02/</guid><pubDate>Sat, 25 Jun 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;4-quic-소개&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-quic-%EC%86%8C%EA%B0%9C&quot; aria-label=&quot;4 quic 소개 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. QUIC 소개&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MintyU | Feed]]></title><description><![CDATA[Software Development Blog]]></description><link>https://mintyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Oct 2022 11:46:27 GMT</lastBuildDate><item><title><![CDATA[TCP와 QUIC 파일 전송 성능 비교 (3)]]></title><description><![CDATA[6. 실험 결과 근거리 네트워킹 실험 근거리 네트워킹 실험에서는 동일한 기기 상에서 서버와 클라이언트를 각각 실행한 환경에서 파일을 전송 후 성능을 측정했습니다. 해당 실험 환경의 Round Trip Time은 min / avg / max…]]></description><link>https://mintyu.github.io/capstone-quic_03/</link><guid isPermaLink="false">https://mintyu.github.io/capstone-quic_03/</guid><pubDate>Mon, 27 Jun 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;6-실험-결과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#6-%EC%8B%A4%ED%97%98-%EA%B2%B0%EA%B3%BC&quot; aria-label=&quot;6 실험 결과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. 실험 결과&lt;/h2&gt;
+&lt;h3 id=&quot;근거리-네트워킹-실험&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B7%BC%EA%B1%B0%EB%A6%AC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9-%EC%8B%A4%ED%97%98&quot; aria-label=&quot;근거리 네트워킹 실험 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;근거리 네트워킹 실험&lt;/h3&gt;
+&lt;p&gt;근거리 네트워킹 실험에서는 동일한 기기 상에서 서버와 클라이언트를 각각 실행한 환경에서 파일을 전송 후 성능을 측정했습니다.&lt;/p&gt;
+&lt;p&gt;해당 실험 환경의 Round Trip Time은 min / avg / max / stddev = 0.037 / 0.079 / 0.149 / 0.026 ms 입니다.&lt;/p&gt;
+&lt;p&gt;TCP, TCP+TLS, QUIC 각각 1개에서 6개로 연결을 병렬로 늘려가며 실험했습니다. 실험 결과는 각 케이스마다 10회 전송 후 전송 시간의 평균을 도출했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6f674bd1438a1c0df265d0ab87cfb2d5/2cefc/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABoUlEQVQ4y5VTi27DIAzM/3/lHtrSJmlePEOAm21K01bVplGdahtjfIfT5JwBMMpafETX9xiGAdZaiZmgxWfs+y4xpZT4XddhXVeJca0mp4RxXnFxiSOIMcI6D++9HOakPQbxGbzPsRBKzDkndqI6pSB3SOhcxpvKcBEPK8n+4Zf0jOfFsVtBvoFP+ZjxTkVbk6FDLsXwPzTcqtYaMRXK1JPQ/6ainzrhQyUM5C9bwewP+9nnJpqHtq+UDroA5WH0IEkKTvawz3c+2+MGNPxS8zwL7aoNd51S0aR2/YhXdEu84Sdnygy1KgQfZL+KXH5Px3N5LEEq/5XYjfIYO0zbgF6dcJq+ZLZ41pz1cknwu/x7GiljjOxxTs2z1mDbNn7lJAGZv0iJcabCPfqtRe+/0ekW3drKRYxZT3SwzGNMV5C9uSAXNvhj+Wxg8gqbNUFhiReM+xkXRjhhCK34Kk1wlCtzWKc/UbcVVcNX+t/0FRTf7EQ76lKQKfOjsDb8/S7LcrOrTlorKMKxV3Rc1kXyWGur7WvK959WtadpkkK/5yb8AH7vSd2Al248AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;근거리&quot;
+        title=&quot;근거리&quot;
+        src=&quot;/static/6f674bd1438a1c0df265d0ab87cfb2d5/fcda8/1.png&quot;
+        srcset=&quot;/static/6f674bd1438a1c0df265d0ab87cfb2d5/12f09/1.png 148w,
+/static/6f674bd1438a1c0df265d0ab87cfb2d5/e4a3f/1.png 295w,
+/static/6f674bd1438a1c0df265d0ab87cfb2d5/fcda8/1.png 590w,
+/static/6f674bd1438a1c0df265d0ab87cfb2d5/efc66/1.png 885w,
+/static/6f674bd1438a1c0df265d0ab87cfb2d5/c83ae/1.png 1180w,
+/static/6f674bd1438a1c0df265d0ab87cfb2d5/2cefc/1.png 1400w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;실험 결과, QUIC이 더 느린 것으로 나타났으며 TCP 연결이 오히려 더 빨랐고, TLS까지 사용했을 경우 TLS 연결에 필요한 추가적인 시간만큼 더 지연이 생겼으며 그조차도 QUIC보다는 빨랐습니다.&lt;/p&gt;
+&lt;p&gt;RTT 값이 매우 극단적으로 작은 환경에서 실험했기 때문에, 이 경우는 TCP의 문제점으로 지적했던 3-Way Handshake 연결 설정이나 HOL Blocking 문제가 크게 나타나지 않았습니다. RTT 값이 극단적으로 작기 때문에 3-Way Handshake를 통한 연결 수립에 큰 시간이 걸리지 않았을 뿐만 아니라 Packet Loss도 0%로 전혀 발생하지 않았기 때문에 HOL Blocking으로 인한 문제도 발생하지 않았기 때문입니다.&lt;/p&gt;
+&lt;p&gt;또한 근거리 네트워킹 실험에서는 연결 수립에 필요한 시간이 워낙 짧다 보니 연결 수를 늘려 병렬 파일 전송을 했을 경우 전송 시간이 줄어드는 것까지 확인할 수 있었습니다.&lt;/p&gt;
+&lt;h3 id=&quot;원거리-네트워킹-실험&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%90%EA%B1%B0%EB%A6%AC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9-%EC%8B%A4%ED%97%98&quot; aria-label=&quot;원거리 네트워킹 실험 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;원거리 네트워킹 실험&lt;/h3&gt;
+&lt;p&gt;이번엔 RTT 값이 매우 큰, 해외 서버에서 데이터를 전송받는 경우를 가정해봅시다. 원거리 네트워킹 실험의 환경을 구축하기 위해서 AWS EC2 서비스를 이용했습니다.&lt;/p&gt;
+&lt;p&gt;us-east-1 서버(미국 동부 - 버지니아 북부)를 이용하여, 2 vCPU와 4 GiB 메모리의 t2.medium 인스턴스로 서버를 동작했습니다.&lt;/p&gt;
+&lt;p&gt;해당 실험 환경의 Round Trip Time은 min / avg / max / stddev = 194.567 / 195.514 / 208.020 / 1.646 ms 입니다.&lt;/p&gt;
+&lt;p&gt;마찬가지로 TCP, CP+TLS, QUIC 각각 1개에서 6개로 연결을 병렬로 늘려가며 실험하였으며 각 케이스마다 10회 전송 후 전송 시간의 평균을 도출했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/15fc995cb7bfd0a3813f84e570da8c33/2cefc/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABfUlEQVQ4y41TiZaDIAzs///k9tit1ipVQQUhzBIs1qp70DdmSOLQmHDw3mNaHi48c9HglucQQkSvxYhS3IPvhr7vo49tWZYoiiJaIpoUgtYhvmRtdBIFUecipv0LztGO7z13FmSSgAX/C3trFvzPWucNwxDLH8cRxphYaRTkzV6ZayRRFmqaBkqpyKWSaGWLQQ+T4PL030rTWqNuanRdNx+wKZlP4ITwKsgTN3tVJzBqC9kqdCoIOZr90zcPcTKQtoam8A/5G0gp5yTjNAqZIXt8IQ/IxCeKJkNjBIS94W6uKE0WkEfOEGOBxlbonXqVPJKOgWK44qHvkK6OaN0Dimr0JGMFfue36bIeB1zVBZ1VWMz5BjynP8Fx49IcGutwDlV/KgTr8dESTpJwVoSjnMB8ivnAJxzD/hRwefJyCILLq+djU3xq+7PDPnXgLbbhz/0hjQM3hrvN4BljmxrG4JljtG07x5izj3myb1cvreWMJV5VVbwA67zlni/HN24mSyU8DGZ8AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;원거리&quot;
+        title=&quot;원거리&quot;
+        src=&quot;/static/15fc995cb7bfd0a3813f84e570da8c33/fcda8/2.png&quot;
+        srcset=&quot;/static/15fc995cb7bfd0a3813f84e570da8c33/12f09/2.png 148w,
+/static/15fc995cb7bfd0a3813f84e570da8c33/e4a3f/2.png 295w,
+/static/15fc995cb7bfd0a3813f84e570da8c33/fcda8/2.png 590w,
+/static/15fc995cb7bfd0a3813f84e570da8c33/efc66/2.png 885w,
+/static/15fc995cb7bfd0a3813f84e570da8c33/c83ae/2.png 1180w,
+/static/15fc995cb7bfd0a3813f84e570da8c33/2cefc/2.png 1400w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;원거리 환경이 되자 결과가 뒤집혔습니다. 이 경우 QUIC이 TCP보다 전송 속도가 더 빨랐습니다.&lt;/p&gt;
+&lt;p&gt;자세한 결과 분석을 위해 파일 전송 시간에서 연결을 수립하는 데 걸린 시간만 따로 측정해보았습니다. 아래는 그 결과 그래프입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f0bccdbd4be85d66e415f717ff90917b/2cefc/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB8ElEQVQ4y41Ua28bIRD0//9j/dBPVdUkqhQ5thPHx70POJ7LdIFz4lRRU+QRLCxzswN4l1JCbsSYtEPfd2jbFuM4wpFBP3AsWlhroZRC01w4ZwAFjXnqIHhNCIGu65C5dpnMe48YCS7EsjHDOYdIAdbVOMZY8owxHDtQDJxjObZve4ioEmbmq9IP7ZOpfy+xwkyUv34l/V/QhkqdYGPCYJkwy5znucgtidx/hZSous69dIQXRTjKhNFuHn7V0l8lBg56CxwV8KwBHW5Kzuqy0Z+WRCkbXOm4lz7hpBIOrKYzBB83pdjK599OSvmBMJMUok2XY2/ESkxCOGsqpCglv8uvAggm6veS043BGYo3nnXisrLZtzXXdUMrVJywhAG957vpXyHjWA9FLkv1hqo3Bwm8sjfSV4qIwBsXzAzhBYRrMIapxJJVcRGg7YPl2jgfsBcX3D0f8Pvlgcd3aMd7iOkH9pdvODTfcWl/oml/Ye4esfR7qOEIPZwg+ycsw6HMyfFUS45MepRP6PQ9pH2E9g2UPSO6DuQGJAYCy2ZFyXPsR1BBHvclLvNhroTWGqx6xWo81jVALQZm9SWWyjDYL20KruPVOO4t5kWXsV455tzt6X08lEj8crZTSEQlYZomaP5zyOvpesrlVsS3A88v7g/sIkazTItsUgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;연결 시간&quot;
+        title=&quot;연결 시간&quot;
+        src=&quot;/static/f0bccdbd4be85d66e415f717ff90917b/fcda8/3.png&quot;
+        srcset=&quot;/static/f0bccdbd4be85d66e415f717ff90917b/12f09/3.png 148w,
+/static/f0bccdbd4be85d66e415f717ff90917b/e4a3f/3.png 295w,
+/static/f0bccdbd4be85d66e415f717ff90917b/fcda8/3.png 590w,
+/static/f0bccdbd4be85d66e415f717ff90917b/efc66/3.png 885w,
+/static/f0bccdbd4be85d66e415f717ff90917b/c83ae/3.png 1180w,
+/static/f0bccdbd4be85d66e415f717ff90917b/2cefc/3.png 1400w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;TCP 연결의 수를 늘릴수록 점점 연결에 필요한 시간이 증가했습니다. 이에 반해, QUIC의 경우 연결 후 Stream을 늘렸지만 별다른 연결 시간 증가는 확인할 수 없었습니다.&lt;/p&gt;
+&lt;p&gt;뿐만 아니라, QUIC은 2번째 전송부터는 0-RTT로 바로 데이터 전송을 시도할 수 있습니다. 이에 따라 그래프에서 연결 시간이 기존보다 더 줄어든것까지 확인할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;요약&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9A%94%EC%95%BD&quot; aria-label=&quot;요약 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;요약&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8870f1ad8d9ba06109b21bcc128a456a/2cefc/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABkElEQVQ4y61T227bMAzN///ZsDZp2gFDX4bWjuOkcayLJetm+YyUk64ohj0slXAkkpKPeRFX8zyDR0gT9DDAWgulFEZnYZzBQLYrnHPQWpc7rMdxhDEG5qKnlLBishgjfRzQC0FkEl3XQRkJZRVEL9D3PQSd6UHj3J8hpSw2r1X5uZCi2GOIC2HOmdbF01tGplkIS9jzwhmnCBUkhqjfoYOCiQM694bavKCxFfa2pr3Gzr5e5Apv7rAQjpSLgUjascLRNXSwR+cPBSff4kT6ybUwSWHKESkH2kPZU/bvNsxXD2k+nw/41SvspEcjJ7QqFewJjWR5IjmiFh4131Gh3K3EH7nVHiuuElePw53yjDRlCnv6K/jsn6BaFEIOmfN4K2hZQv7KsWJm7ymxFBI/n1swXz1ksi/z8PoODbWOpg4w3FpmwMi5tVQwaitHOXaj/YAR/hP4XqBICyGHfHr+iePjBsenLar779hvN2gfH9Bs13i96Aw+q9d3Rd5t7vFy943kNRq2/Xj60Cn/OeZP8m96WEFODvPjgwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;요약&quot;
+        title=&quot;요약&quot;
+        src=&quot;/static/8870f1ad8d9ba06109b21bcc128a456a/fcda8/4.png&quot;
+        srcset=&quot;/static/8870f1ad8d9ba06109b21bcc128a456a/12f09/4.png 148w,
+/static/8870f1ad8d9ba06109b21bcc128a456a/e4a3f/4.png 295w,
+/static/8870f1ad8d9ba06109b21bcc128a456a/fcda8/4.png 590w,
+/static/8870f1ad8d9ba06109b21bcc128a456a/efc66/4.png 885w,
+/static/8870f1ad8d9ba06109b21bcc128a456a/c83ae/4.png 1180w,
+/static/8870f1ad8d9ba06109b21bcc128a456a/2cefc/4.png 1400w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;RTT가 매우 작은 환경인 경우에는 TCP 전송이 더 빨라 유리하지만, RTT가 커지기 시작하면(일반적으로 서비스하는 경우) TCP보다 &lt;strong&gt;QUIC을 통한 파일 전송이 더 유리할 수도 있다&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;7-결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#7-%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;7 결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7. 결론&lt;/h2&gt;
+&lt;p&gt;앞선 실험 결과에서 알 수 있듯, RTT 값에 따라서 RTT 값이 작은 경우 TCP가 유리할 수는 있으나, 대부분의 서비스 환경에서의 RTT 수준이면 QUIC을 통한 파일 전송을 충분히 사용할 수 있을 것이라고 보이며, 충분히 경쟁력 있다고 생각합니다.&lt;/p&gt;
+&lt;p&gt;아직 QUIC이 완벽히 정착되지 않았고, 최적화도 부족하며 무엇보다 충분한 Document와 Community가 축적될 시간이 없었다는 점에서 아쉽다고 느낄 수는 있으나, 실험 결과 충분히 TCP를 대체할만한 경쟁력을 갖추고있다고 생각됩니다.&lt;/p&gt;
+&lt;p&gt;특히 병렬 전송이 필요한 경우에 TCP는 하나의 연결에 1:1 통신밖에 되지 않아서, 복수 개의 연결을 수립하고 병렬 전송해야 하기 때문에 이 과정에서 연결 추가에 따른 오버헤드가 발생했습니다. 하지만 QUIC은 Stream을 늘리는 데 별다른 시간 소모가 추가적으로 필요하지 않기 때문에 병렬 전송이 필요한 분야에서는 TCP보다 QUIC이 압도적으로 유리함을 실험을 통해 확인할 수 있었습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TCP와 QUIC 파일 전송 성능 비교 (2)]]></title><description><![CDATA[4. QUIC 소개 앞선 글에서 설명했듯, QUIC은 UDP를 기반으로 만들어진 전송 계층 프로토콜입니다. 하지만, 기존에 TCP를 필요로 하던 HTTP에서 TCP의 자리를 UDP 기반의 QUIC 프로토콜이 차지했다는 사실은, UDP…]]></description><link>https://mintyu.github.io/capstone-quic_02/</link><guid isPermaLink="false">https://mintyu.github.io/capstone-quic_02/</guid><pubDate>Sat, 25 Jun 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;4-quic-소개&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-quic-%EC%86%8C%EA%B0%9C&quot; aria-label=&quot;4 quic 소개 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. QUIC 소개&lt;/h2&gt;
 &lt;p&gt;앞선 글에서 설명했듯, QUIC은 UDP를 기반으로 만들어진 전송 계층 프로토콜입니다. 하지만, 기존에 TCP를 필요로 하던 HTTP에서 TCP의 자리를 UDP 기반의 QUIC 프로토콜이 차지했다는 사실은, UDP의 특징을 이해하고 있다면 다소 아이러니하게 들릴 수도 있습니다.&lt;/p&gt;
 &lt;p&gt;물론, UDP는 데이터 전송의 신뢰성을 보장하지 못하지만, QUIC은 UDP 위에 새로운 계층을 추가하면서 신뢰성을 제공하게 됩니다. 이 추가된 계층은, 기존 TCP의 기능이었던 패킷 재전송이나 혼잡 제어, 속도 조정과 같은 기능을 제공해주게 되면서 UDP 기반 통신에도 신뢰성을 확보할 수 있게 되었습니다. 뿐만 아니라 TCP가 원래는 커널 내부에 구현되어있었지만, QUIC의 혼잡 제어 알고리즘은 어플리케이션으로 구현되어 수정이 쉽고 최적화가 용이하다는 장점이 있습니다.&lt;/p&gt;
 &lt;h3 id=&quot;quic의-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quic%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;quic의 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;QUIC의 특징&lt;/h3&gt;
@@ -1235,147 +1385,4 @@ plt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;show&lt;span cl
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;길이가 모두 63으로 맞춰졌으며, 빈 공간은 모두 1로 채워진 것을 직접 눈으로 확인해 보았습니다.&lt;/p&gt;
 &lt;p&gt;이제 단어들을 고유한 정수로 맵핑하였으니, 각 정수를 고유한 단어 벡터로 바꾸는 작업이 필요합니다. 이 작업을 &lt;strong&gt;임베딩(Embedding)&lt;/strong&gt;이라고 합니다. 단어 벡터를 얻는 방법은 크게 원-핫 인코딩과 워드 임베딩이 있는데, 주로 워드 임베딩이 사용됩니다.&lt;/p&gt;
-&lt;p&gt;다음 게시물에서는 원-핫 인코딩은 무엇인지, 또 무슨 문제 때문에 주로 Word2Vec을 사용하는지에 대해 다루도록 하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[자연어 처리(NLP)의 전처리 - 단어 집합 생성]]></title><description><![CDATA[단어 집합(Vocabulary) 생성 단어 집합(vocabuary)이란 중복을 제거한 텍스트의 총 단어의 집합(set…]]></description><link>https://mintyu.github.io/Pytorch02/</link><guid isPermaLink="false">https://mintyu.github.io/Pytorch02/</guid><pubDate>Tue, 13 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;단어-집합vocabulary-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EC%96%B4-%EC%A7%91%ED%95%A9vocabulary-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;단어 집합vocabulary 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단어 집합(Vocabulary) 생성&lt;/h2&gt;
-&lt;p&gt;단어 집합(vocabuary)이란 중복을 제거한 텍스트의 총 단어의 집합(set)을 의미합니다. 우선, 실습을 위해서 깃허브에서 &apos;네이버 영화 리뷰 분류하기&apos; 데이터를 다운로드하겠습니다. 네이버 영화 리뷰 데이터는 총 20만 개의 영화 리뷰를 긍정 1, 부정 0으로 레이블링한 데이터입니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; urllib&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;request
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pandas &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; pd
-&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; konlpy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tag &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Mecab
-&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; nltk &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; FreqDist
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; matplotlib&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pyplot &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; plt
-
-urllib&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;urlretrieve&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;https://raw.githubusercontent.com/e9t/nsmc/master/ratings.txt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; filename&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ratings.txt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read_table&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ratings.txt&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# 데이터프레임에 저장&lt;/span&gt;
-data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5de8ef94b25fd87cd1611b2e989f91bc/46115/1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42.567567567567565%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABGUlEQVQoz3WSZ4rFMAyEfY/03nsjIYHc/1JaPoMe7GP3xyBblkYjySYIAqnrWtI0Fc/zxPf9fxGGocRxbC15eZ7LeZ4yTZPM8yxlWYpZlkXu+5aqqqxDURSFTeCMBeM4yvM8sq6rJTqOQ973lWEYbDwwXdcJpCTygNqmaQQ/BFTu+/5jIQP7vltl5CRJIo7jSBRFYtq2tQG0ALQlJVQy4rhrexARA1DPuMg1PCKdKjyoQhKYK20oCW2iDAFKyJkYCOEwGogqZLuua60iy7JfZBTnThF8nMFHIS3xQLvfW9aqkOooWN62bXbuqpBREG8V0h7Vvgn1jEoWpvNU6Bw5Y4m1S+FyXZe9/PUP8VEMdfr/8OsS9T9iUfgDF24JbBW1d5cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;1&quot;
-        title=&quot;1&quot;
-        src=&quot;/static/5de8ef94b25fd87cd1611b2e989f91bc/fcda8/1.png&quot;
-        srcset=&quot;/static/5de8ef94b25fd87cd1611b2e989f91bc/12f09/1.png 148w,
-/static/5de8ef94b25fd87cd1611b2e989f91bc/e4a3f/1.png 295w,
-/static/5de8ef94b25fd87cd1611b2e989f91bc/fcda8/1.png 590w,
-/static/5de8ef94b25fd87cd1611b2e989f91bc/efc66/1.png 885w,
-/static/5de8ef94b25fd87cd1611b2e989f91bc/c83ae/1.png 1180w,
-/static/5de8ef94b25fd87cd1611b2e989f91bc/46115/1.png 1290w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;전체 샘플의 수 : {}&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# 전체 샘플의 수 : 200000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;br/&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;sample_data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# 임의로 100개만 저장&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;br/&gt;
-&lt;p&gt;아래와 같이 정규 표현식을 통해 데이터를 정제하는 과정을 거칩니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;sample_data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;document&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; sample_data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;document&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replace&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;[^ㄱ-ㅎㅏ-ㅣ가-힣 ]&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-sample_data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e43d677c95e027ed4b8fbebfb682be77/874d1/2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.24324324324324%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEUlEQVQoz2WRV27AMAxDfY3svZG9kHzk/rdS8QwoaNMPQpZlUpRswjCUoigsgiAQ8i+iKPoXeQvnPE/p+16WZZE0TcUMwyDXdUnXdVKWpVRVZaNCm2VZJtM0yX3fsm2bFTqOQ57nsVzAG8Nh33dpmkbGcXyLbdvaHBGaEoEKEXGFeJIk1nEcx2Igcok6BaBnhNd1tcKQEQbaCHCPGdYAx1CkG6NSUGeIQa7r2u6IN0yCO+oAIzSk/grqDnHluq74vi+e59noOI7d3zzP76i81VFVEPFXUEfmh76/TM59nuc2QmIKBAHOEGSaV5CEzjj8LahnIm4hA92j7pC7P4J0pAsuIH4d6pkfhECETNQza9H8B5qVCIsVdhpqAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;2&quot;
-        title=&quot;2&quot;
-        src=&quot;/static/e43d677c95e027ed4b8fbebfb682be77/fcda8/2.png&quot;
-        srcset=&quot;/static/e43d677c95e027ed4b8fbebfb682be77/12f09/2.png 148w,
-/static/e43d677c95e027ed4b8fbebfb682be77/e4a3f/2.png 295w,
-/static/e43d677c95e027ed4b8fbebfb682be77/fcda8/2.png 590w,
-/static/e43d677c95e027ed4b8fbebfb682be77/efc66/2.png 885w,
-/static/e43d677c95e027ed4b8fbebfb682be77/c83ae/2.png 1180w,
-/static/e43d677c95e027ed4b8fbebfb682be77/874d1/2.png 1310w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;그 다음은 토큰화를 수행하기에 앞서, 불용어(Stopword)를 제거하기 위해 불용어를 임의로 정해주었습니다.&lt;/p&gt;
-&lt;p&gt;불용어란, 자주 등장하지만 분석을 하는 것에 있어서는 큰 도움이 되지 않는 단어들을 말합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;stopwords&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;의&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;가&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;이&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;은&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;들&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;는&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;좀&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;잘&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;걍&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;과&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;도&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;를&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;으로&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;자&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;에&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;와&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;한&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;하다&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;br/&gt;
-&lt;p&gt;형태소 분석기는 Mecab을 사용합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Mecab&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-tokenized&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; sentence &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; sample_data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;document&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    temp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;morphs&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sentence&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# 토큰화&lt;/span&gt;
-    temp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;word &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; word &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; temp &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; word &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; stopwords&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# 불용어 제거&lt;/span&gt;
-    tokenized&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenized&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9563775cb04754443c39d32054e13ff8/df438/3.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 24.324324324324326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAs0lEQVQY0z2QWwrFIAxEXUoptEjp01oVW8H9byqXE8j9CI6TyWTUpZRk33c5jkNCCOK9l/M89Q7/PI9s2yborutSfl1XxTFG1YBLKTIMg7j7vlUMwYkpJhTDrTXlc87/PgtrrdJ7VzM80IMdTTOhAWYQjMAG0MFzkgqOJbaAeV7nABDf96kQTFqeY8ZgSw3GBDPTvO+reBxHcfZXiPgrEmFqae2ODgyHHoNlWbSmadKa51l+6lOd5w1o3yMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;3&quot;
-        title=&quot;3&quot;
-        src=&quot;/static/9563775cb04754443c39d32054e13ff8/fcda8/3.png&quot;
-        srcset=&quot;/static/9563775cb04754443c39d32054e13ff8/12f09/3.png 148w,
-/static/9563775cb04754443c39d32054e13ff8/e4a3f/3.png 295w,
-/static/9563775cb04754443c39d32054e13ff8/fcda8/3.png 590w,
-/static/9563775cb04754443c39d32054e13ff8/efc66/3.png 885w,
-/static/9563775cb04754443c39d32054e13ff8/c83ae/3.png 1180w,
-/static/9563775cb04754443c39d32054e13ff8/df438/3.png 1556w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;이제 단어집합(Vocabulary)을 생성합니다. NLTK에서는 빈도수 계산 도구인 FreqDist()를 지원합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;vocab &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; FreqDist&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hstack&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenized&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;단어 집합의 크기 : {}&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vocab&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# 단어 집합의 크기 : 664&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;br/&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;vocab&lt;/code&gt;에는 단어를 키(key)로, 단어에 대한 빈도수가 값(value)으로 저장됩니다. 다음과 같이 vocab에 단어를 입력하면 등장한 빈도수를 리턴합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;vocab&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;재밌&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# 10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;br/&gt;
-&lt;p&gt;만약 vocab의 사이즈를 원하는대로 조정하고싶다면, &lt;code class=&quot;language-text&quot;&gt;.most_common()&lt;/code&gt;을 통해 할 수 있습니다. 예시는 다음과 같습니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;vocab_size &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;
-vocab &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; vocab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;most_common&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vocab_size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;단어 집합의 크기 : {}&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vocab&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# 단어 집합의 크기 : 100&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;다음 게시물에서는 원-핫 인코딩은 무엇인지, 또 무슨 문제 때문에 주로 Word2Vec을 사용하는지에 대해 다루도록 하겠습니다.&lt;/p&gt;</content:encoded></item></channel></rss>
